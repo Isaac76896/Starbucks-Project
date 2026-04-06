@@ -1,3 +1,12 @@
+import javafx.application.Application;
+import javafx.fxml.FXML;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TitledPane;
+import org.kordamp.ikonli.Ikonli;
+
+import javax.swing.*;
 import java.util.List;
 
 public class RewardsController {
