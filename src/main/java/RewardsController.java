@@ -66,4 +66,14 @@ public class RewardsController {
     public void updateTier() {}
 
     public void earnStars() {}
+
+    /** opens the application **/
+    public Application getApplication() {
+        return null;
+    }
+
+    /** sets the scene for the rewards screen **/
+    public Scene rewardsScreen() {
+        return null;
+    }
 }
