@@ -74,7 +74,15 @@ public class RewardsController {
         return account.getOffers();
     }
 
-    public void updateTier() {}
+    public void updateTier() {
+        if(account.getTotalStars() >= 0 && account.getTotalStars() <= 500) {
+            account.setTier("Green");
+        } else if(account.getTotalStars() > 500 && account.getTotalStars() <= 2500) {
+            account.setTier("Gold");
+        } else {
+            account.setTier("Reserve");
+        }
+    }
 
     public void earnStars() {}
 
