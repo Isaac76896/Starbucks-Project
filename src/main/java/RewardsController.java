@@ -7,6 +7,7 @@ import javafx.scene.control.*;
 import org.kordamp.ikonli.Ikonli;
 
 import javax.swing.*;
+import java.io.IOException;
 import java.util.List;
 
 public class RewardsController {
