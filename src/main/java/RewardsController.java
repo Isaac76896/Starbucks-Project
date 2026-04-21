@@ -29,6 +29,10 @@ public class RewardsController {
     @FXML TitledPane findAStoreTitle;
     @FXML TitledPane memberPerksTitle;
     @FXML TextArea howitWorksArea;
+    @FXML Label starBalanceLabel;
+    @FXML ProgressBar starBalanceProgressBar;
+    @FXML Label tierGoalLabel;
+
 
 
     public RewardsController(RewardsAccount account, Customer customer) {
