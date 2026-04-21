@@ -30,7 +30,7 @@ public class RewardsController {
     @FXML TitledPane memberPerksTitle;
     @FXML TextArea howitWorksArea;
     @FXML Label starBalanceLabel;
-    @FXML ProgressBar starBalanceProgressBar;
+    @FXML ProgressBar tierProgressBar;
     @FXML Label tierGoalLabel;
 
 
