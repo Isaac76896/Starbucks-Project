@@ -84,7 +84,11 @@ public class RewardsController {
         }
     }
 
-    public void earnStars() {}
+    public void earnStars(Order order) {
+        int starsEarned = (int) (order.getTotalPrice() * 2);
+        account.setTotalStars(account.getTotalStars() + starsEarned);
+        updateTier();
+    }
 
     /** opens the application **/
     public Application getApplication() {
