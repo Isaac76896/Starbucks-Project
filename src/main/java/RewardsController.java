@@ -70,8 +70,8 @@ public class RewardsController {
         }
     }
 
-    public List<Order> checkOffers() {
-        return null;
+    public List<Reward> checkOffers() {
+        return account.getOffers();
     }
 
     public void updateTier() {}
