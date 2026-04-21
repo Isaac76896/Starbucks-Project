@@ -97,6 +97,14 @@ public class RewardsController {
 
     /** sets the scene for the rewards screen **/
     public Scene rewardsScreen() {
-        return null;
+        try{
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("RewardsScreen.fxml"));
+            loader.setController(this);
+            Parent root = loader.load();
+            return new Scene(root);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 }
