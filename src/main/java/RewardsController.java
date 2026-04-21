@@ -3,9 +3,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TitledPane;
+import javafx.scene.control.*;
 import org.kordamp.ikonli.Ikonli;
 
 import javax.swing.*;
