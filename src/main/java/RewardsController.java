@@ -22,12 +22,7 @@ public class RewardsController {
     @FXML Button locationsButton;
     @FXML Button rewardsButton;
     @FXML Button giftCardsButton;
-    @FXML Ikonli userIcon;
-    @FXML Ikonli coffeeIcon;
-    @FXML Ikonli starbucksLogo;
-    @FXML Ikonli starbucksStar;
-    @FXML TitledPane findAStoreTitle;
-    @FXML TitledPane memberPerksTitle;
+    @FXML Button cartButton;
     @FXML TextArea howitWorksArea;
     @FXML Label starBalanceLabel;
     @FXML ProgressBar tierProgressBar;
