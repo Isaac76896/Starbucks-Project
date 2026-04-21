@@ -62,7 +62,13 @@ public class RewardsController {
         return account.getTotalStars();
     }
 
-    public void applyRewards() {}
+    public void applyRewards(Reward reward) {
+        if(reward.getStarCost() <= account.getTotalStars()) {
+            account.setTotalStars(account.getTotalStars() - reward.getStarCost());
+            reward.setRedeemed(true);
+            updateTier();
+        }
+    }
 
     public List<Order> checkOffers() {
         return null;
