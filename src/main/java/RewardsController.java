@@ -59,7 +59,7 @@ public class RewardsController {
     }
 
     public int viewStarBalance() {
-        return 0;
+        return account.getTotalStars();
     }
 
     public void applyRewards() {}
