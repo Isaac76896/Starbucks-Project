@@ -102,4 +102,27 @@ public class RewardsController {
             return null;
         }
     }
+
+    @FXML
+    public void initialize() {
+        welcomeLabel.setText("Welcome, " + customer.getName());
+
+        int stars = account.getTotalStars();
+        starBalanceLabel.setText(stars + " stars");
+        updateTier();
+
+        String tier = account.getTier();
+        if (tier.equals("Green")) {
+            tierProgressBar.setProgress(stars / 500.0);
+            tierGoalLabel.setText((500 - stars) + " stars to Gold");
+        } else if (tier.equals("Gold")) {
+            tierProgressBar.setProgress((stars - 500) / 2000.0);
+            tierGoalLabel.setText((2500 - stars) + " stars to Reserve");
+        } else {
+            tierProgressBar.setProgress(1.0);
+            tierGoalLabel.setText("Reserve tier reached!");
+        }
+
+        howitWorksArea.setText("1. Pay with the app to earn 2 stars per $1.\n2. Redeem stars for free drinks and food.\n3. Green: 0-499 stars | Gold: 500-2499 | Reserve: 2500+");
+    }
 }
