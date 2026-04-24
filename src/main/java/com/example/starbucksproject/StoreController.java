@@ -1,5 +1,6 @@
+package com.example.starbucksproject;
+
 import java.util.List;
-import java.util.ListResourceBundle;
 
 public class StoreController {
     private List<Store> stores;

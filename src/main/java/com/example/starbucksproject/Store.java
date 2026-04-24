@@ -1,3 +1,5 @@
+package com.example.starbucksproject;
+
 import java.util.List;
 
 public class Store {

@@ -1,3 +1,5 @@
+package com.example.starbucksproject;
+
 public class MenuItem {
     private String itemId;
     private String name;

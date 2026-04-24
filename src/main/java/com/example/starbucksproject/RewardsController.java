@@ -1,12 +1,12 @@
+package com.example.starbucksproject;
+
 import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import org.kordamp.ikonli.Ikonli;
 
-import javax.swing.*;
 import java.io.IOException;
 import java.util.List;
 
@@ -29,7 +29,7 @@ public class RewardsController {
     @FXML Label tierGoalLabel;
     @FXML Label welcomeLabel;
 
-    
+
     public RewardsController(RewardsAccount account, Customer customer) {
         this.account = account;
         this.customer = customer;
@@ -65,9 +65,9 @@ public class RewardsController {
         }
     }
 
-    public List<Reward> checkOffers() {
-        return account.getOffers();
-    }
+    //public List<Reward> checkOffers() {
+       //return account.getOffers();
+  //}
 
     public void updateTier() {
         if(account.getTotalStars() >= 0 && account.getTotalStars() <= 500) {
