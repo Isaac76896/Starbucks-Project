@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
+
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -11,10 +13,10 @@ public class RewardsAccount {
     private String accountId;
     private String tier;
     private int totalStars;
-    private List<Order> offers;
+    private List<Reward> offers;
     private Date expiryDate;
 
-    public RewardsAccount(String accountId, String tier, int totalStars, List<Order> offers, Date expiryDate) {
+    public RewardsAccount(String accountId, String tier, int totalStars, List<Reward> offers, Date expiryDate) {
         this.accountId = accountId;
         this.tier = tier;
         this.totalStars = totalStars;
@@ -36,7 +38,7 @@ public class RewardsAccount {
         this.totalStars = totalStars;
     }
 
-    public void setOffers(List<Order> offers) {
+    public void setOffers(List<Reward> offers) {
         this.offers = offers;
     }
 
@@ -56,7 +58,7 @@ public class RewardsAccount {
         return totalStars;
     }
 
-    public List<Order> getOffers() {
+    public List<Reward> getOffers() {
         return offers;
     }
 
@@ -64,7 +66,9 @@ public class RewardsAccount {
         return expiryDate;
     }
 
-    public List<Order> getAvailRewards() {
-        return null;
+    public List<Reward> getAvailRewards() {
+        return offers.stream()
+                .filter(r -> !r.isRedeemed() && r.getStarCost() <= totalStars)
+                .collect(Collectors.toList());
     }
 }

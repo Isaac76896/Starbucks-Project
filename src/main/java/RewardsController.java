@@ -29,7 +29,7 @@ public class RewardsController {
     @FXML Label tierGoalLabel;
     @FXML Label welcomeLabel;
 
-    
+
     public RewardsController(RewardsAccount account, Customer customer) {
         this.account = account;
         this.customer = customer;

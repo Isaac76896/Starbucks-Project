@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #EBEBEB;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+
+    <top>
+        <HBox spacing="20" style="-fx-background-color: white; -fx-padding: 12 24 12 24; -fx-alignment: center-left; -fx-border-color: #E0E0E0; -fx-border-width: 0 0 1 0;">
+            <ImageView fitHeight="60" fitWidth="60" preserveRatio="true">
+                <image><Image url="@starbucks-logo.png" /></image>
+            </ImageView>
+         <Region prefHeight="60.0" prefWidth="327.0" />
+            <Button fx:id="menuButton" style="-fx-background-color: transparent; -fx-font-size: 14;" text="Menu" />
+            <Button fx:id="locationsButton" style="-fx-background-color: transparent; -fx-font-size: 14;" text="Locations" />
+            <Button fx:id="rewardsButton" style="-fx-background-color: transparent; -fx-font-size: 14; -fx-font-weight: bold;" text="Rewards" />
+            <Button fx:id="giftCardsButton" style="-fx-background-color: transparent; -fx-font-size: 14;" text="Gift Cards" />
+         <Button fx:id="cartButton" mnemonicParsing="false" prefHeight="27.0" prefWidth="49.0" style="-fx-background-color: transparent; -fx-font-size: 14;" text="Cart" />
+        </HBox>
+    </top>
+
+    <center>
+        <ScrollPane fitToWidth="true" style="-fx-background: #EBEBEB; -fx-background-color: #EBEBEB;">
+            <content>
+                <VBox spacing="20" style="-fx-padding: 32; -fx-background-color: #EBEBEB;">
+
+                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome, Rain">
+                        <font><Font size="24.0" /></font>
+                    </Text>
+
+                    <HBox spacing="16">
+                        <VBox spacing="12" style="-fx-background-color: #1E3932; -fx-padding: 24; -fx-background-radius: 16;" HBox.hgrow="ALWAYS">
+                            <HBox spacing="10" style="-fx-alignment: center-left;">
+                                <Label text="★" textFill="#CBA258">
+                                    <font><Font size="42.0" /></font>
+                                </Label>
+                                <Label fx:id="starBalanceLabel" text="300 stars" textFill="WHITE">
+                                    <font><Font size="24.0" /></font>
+                                </Label>
+                            </HBox>
+                            <ProgressBar fx:id="tierProgressBar" maxWidth="Infinity" progress="0.6" style="-fx-accent: #CBA258;" />
+                            <HBox>
+                                <Label text="Way to go! Keep earning" textFill="#9EC9A8">
+                                    <font><Font size="12.0" /></font>
+                                </Label>
+                                <Region HBox.hgrow="ALWAYS" />
+                                <Label fx:id="tierGoalLabel" text="500 stars to Gold" textFill="#9EC9A8">
+                                    <font><Font size="12.0" /></font>
+                                </Label>
+                            </HBox>
+                        </VBox>
+
+                        <TextArea fx:id="howitWorksArea" editable="false" prefHeight="160" prefWidth="250" promptText="How it works:" style="-fx-background-color: white; -fx-background-radius: 16;" text="How it works&#10;&#10;Earn 2 Stars per $1 spent when paying with a registered Starbucks Card or the App&#10;&#10;Redeem Stars for rewards - Use your Stars to get free drinks, food, and more&#10;&#10;Level up for bigger rewards- The more Stars you earn, the better the rewards" wrapText="true" HBox.hgrow="NEVER" />
+                    </HBox>
+
+                    <Label style="-fx-font-size: 28; -fx-font-weight: bold;" text="Member perks" />
+
+                    <HBox spacing="16">
+                        <Button fx:id="freeBirthdayDrinkButton" prefHeight="160" prefWidth="180" style="-fx-background-color: white; -fx-background-radius: 16; -fx-alignment: bottom-left; -fx-padding: 16;">
+                            <graphic>
+                                <VBox spacing="6">
+                                    <Label style="-fx-font-weight: bold; -fx-font-size: 14;" text="Free birthday drink" />
+                                    <Label maxWidth="150" style="-fx-text-fill: gray; -fx-font-size: 12;" text="Celebrate with a free drink of your choice!" wrapText="true" />
+                                </VBox>
+                            </graphic>
+                        </Button>
+
+                        <Button fx:id="exclusiveOffersButton" prefHeight="160" prefWidth="180" style="-fx-background-color: white; -fx-background-radius: 16; -fx-alignment: bottom-left; -fx-padding: 16;">
+                            <graphic>
+                                <VBox spacing="6">
+                                    <Label style="-fx-font-weight: bold; -fx-font-size: 14;" text="Exclusive Offers" />
+                                    <Label maxWidth="150" style="-fx-text-fill: gray; -fx-font-size: 12;" text="Get personalized deals and exclusive access to new drops" wrapText="true" />
+                                </VBox>
+                            </graphic>
+                        </Button>
+
+                        <Button fx:id="fastOrderingButton" prefHeight="160" prefWidth="180" style="-fx-background-color: white; -fx-background-radius: 16; -fx-alignment: bottom-left; -fx-padding: 16;">
+                            <graphic>
+                                <VBox spacing="6">
+                                    <Label style="-fx-font-weight: bold; -fx-font-size: 14;" text="Fast ordering" />
+                                    <Label maxWidth="150" style="-fx-text-fill: gray; -fx-font-size: 12;" text="Skip the line with mobile order and pay" wrapText="true" />
+                                </VBox>
+                            </graphic>
+                        </Button>
+                    </HBox>
+
+                </VBox>
+            </content>
+        </ScrollPane>
+    </center>
+
+</BorderPane>

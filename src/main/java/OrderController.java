@@ -1,12 +1,15 @@
+import java.util.Date;
 import java.util.List;
 
 public class OrderController {
     private Order currentOrder;
     private List<OrderItem> cart;
+    private RewardsController rewardsController;
 
     public OrderController(Order currentOrder, List<OrderItem> cart) {
         this.currentOrder = currentOrder;
         this.cart = cart;
+        this.rewardsController = rewardsController;
     }
 
     /** Setters and Getters **/
@@ -33,7 +36,12 @@ public class OrderController {
     public void customization() {}
 
     public Order placeOrder() {
-        return null;
+        currentOrder.setItems(cart);
+        currentOrder.setTotalPrice(currentOrder.calctotal());
+        currentOrder.setStatus("PLACED");
+        currentOrder.setTimeStamp(new Date());
+        rewardsController.earnStars(currentOrder);
+        return currentOrder;
     }
 
     public String trackOrder() {
