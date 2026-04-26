@@ -31,8 +31,31 @@ public class MenuController {
         this.categories = categories;
     }
 
-    public List<User> getMenuItems() {
-        return menuItems;
+        if (category != null) {
+            List<String> subcats = menuItems.stream()
+                    .filter(item -> item.getCategory().equalsIgnoreCase(category))
+                    .map(MenuItem::getSubcategory)
+                    .filter(s -> s != null && !s.isEmpty())
+                    .distinct()
+                    .collect(Collectors.toList());
+
+            if (!subcats.isEmpty()) {
+                Region spacer = new Region();
+                spacer.setPrefWidth(10);
+                filterButtonsBox.getChildren().add(spacer);
+
+                for (String sub : subcats) {
+                    Button subBtn = createFilterTab(sub, sub.equals(activeSubcategory));
+                    subBtn.setOnAction(e -> {
+                        activeSubcategory = sub;
+                        categoryHeadingLabel.setText(sub);
+                        buildSubcategoryTabs(category);
+                        displayItems(filterByCategory(sub));
+                    });
+                    filterButtonsBox.getChildren().add(subBtn);
+                }
+            }
+        }
     }
 
     public List<User> getCategories() {
