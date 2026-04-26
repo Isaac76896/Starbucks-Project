@@ -1,4 +1,16 @@
-import java.util.List;
+package com.example.starbucksproject;
+
+import javafx.fxml.*;
+import javafx.geometry.*;
+import javafx.scene.*;
+import javafx.scene.control.*;
+import javafx.scene.layout.*;
+import javafx.stage.Stage;
+import javafx.event.ActionEvent;
+
+import java.io.*;
+import java.util.*;
+import java.util.stream.*;
 
 public class MenuController {
     private List<User> menuItems;
