@@ -71,7 +71,7 @@ public class MenuController {
         return btn;
     }
 
-    public static void loadMenu() {}
+    private List<MenuItem> currentDisplayedItems = new ArrayList<>();
 
     public static List<User> filterByCategory() {
         return null;
