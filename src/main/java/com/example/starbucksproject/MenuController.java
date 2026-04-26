@@ -132,3 +132,158 @@ public class MenuController {
         if (item.getPrice() > 0) cartTotal -= item.getPrice();
         updateCartPanel();
     }
+
+    private void updateCartPanel() {
+        cartPanel.getChildren().clear();
+
+        Label title = new Label("Your Order");
+        title.setStyle("-fx-font-size: 22; -fx-font-weight: bold;");
+        cartPanel.getChildren().add(title);
+
+        if (cartItems.isEmpty()) {
+            Label empty = new Label("No items added yet");
+            empty.setStyle("-fx-font-size: 13; -fx-text-fill: gray;");
+            cartPanel.getChildren().add(empty);
+        } else {
+            for (MenuItem item : cartItems) {
+                HBox row = new HBox(8);
+                row.setAlignment(Pos.CENTER_LEFT);
+
+                Label name = new Label(item.getName());
+                name.setWrapText(true);
+                name.setMaxWidth(140);
+                name.setStyle("-fx-font-size: 12;");
+
+                Region spacer = new Region();
+                HBox.setHgrow(spacer, Priority.ALWAYS);
+
+                Label price = new Label(String.format("$%.2f", item.getPrice()));
+                price.setStyle("-fx-font-size: 12;");
+
+                Button removeBtn = new Button("✕");
+                removeBtn.setStyle("-fx-background-color: transparent; -fx-text-fill: #cc0000; " +
+                        "-fx-cursor: hand; -fx-font-size: 11; -fx-padding: 0 4;");
+                removeBtn.setOnAction(e -> removeFromCart(item));
+
+                row.getChildren().addAll(name, spacer, price, removeBtn);
+                cartPanel.getChildren().add(row);
+            }
+        }
+
+        Region spacer = new Region();
+        VBox.setVgrow(spacer, Priority.ALWAYS);
+        cartPanel.getChildren().add(spacer);
+
+        Label total = new Label(String.format("Total: $%.2f", cartTotal));
+        total.setStyle("-fx-font-size: 18; -fx-font-weight: bold;");
+        cartPanel.getChildren().add(total);
+
+        Button placeOrder = new Button("Place Order");
+        placeOrder.setMaxWidth(Double.MAX_VALUE);
+        placeOrder.setStyle("-fx-background-color: #1E3932; -fx-text-fill: white; " +
+                "-fx-background-radius: 8; -fx-font-size: 14; -fx-padding: 12; -fx-cursor: hand;");
+        placeOrder.setOnAction(e -> placeOrder());
+        cartPanel.getChildren().add(placeOrder);
+    }
+
+    private void placeOrder() {
+        if (cartItems.isEmpty()) {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Empty Cart");
+            alert.setHeaderText("Your cart is empty!");
+            alert.setContentText("Please add items before placing an order.");
+            alert.showAndWait();
+            return;
+        }
+
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Place Order");
+        alert.setHeaderText("Confirm your order");
+        alert.setContentText(String.format("Total: $%.2f\n\nPlace this order?", cartTotal));
+
+        alert.showAndWait().ifPresent(response -> {
+            if (response == javafx.scene.control.ButtonType.OK) {
+                cartItems.clear();
+                cartTotal = 0.0;
+                updateCartPanel();
+
+                Alert success = new Alert(Alert.AlertType.INFORMATION);
+                success.setTitle("Order Placed");
+                success.setHeaderText("Order placed successfully!");
+                success.setContentText("Your order is being prepared!");
+                success.showAndWait();
+            }
+        });
+    }
+
+    private void onSearchChanged(String query) {
+        if (query == null || query.trim().isEmpty()) {
+            if (activeSubcategory != null) {
+                displayItems(filterByCategory(activeSubcategory));
+            } else if (activeCategory != null) {
+                displayItems(filterByCategory(activeCategory));
+            } else {
+                displayItems(menuItems);
+            }
+        } else {
+            displayItems(searchItems(query));
+        }
+    }
+
+    @FXML
+    public void menuButtonClick(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Menu Screen.fxml"));
+        Parent root = loader.load();
+        MenuController controller = loader.getController();
+        controller.setCustomer(customer);
+        controller.setAccount(account);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+
+    @FXML
+    public void cartButtonClick(ActionEvent event) {
+        boolean showing = cartPanel.isVisible();
+        cartPanel.setVisible(!showing);
+        cartPanel.setManaged(!showing);
+    }
+
+    @FXML
+    public void giftCardsButtonClick(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Gift Cards.fxml"));
+        Parent root = loader.load();
+        GiftCardController controller = loader.getController();
+        controller.setCustomer(customer);
+        controller.setAccount(account);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+
+    @FXML
+    public void locationsButtonClick(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Store Screen.fxml"));
+        Parent root = loader.load();
+        StoreController controller = loader.getController();
+        controller.setCustomer(customer);
+        controller.setAccount(account);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+
+    @FXML
+    public void rewardsButtonClick(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("RewardsScreen.fxml"));
+        Parent root = loader.load();
+        RewardsController controller = loader.getController();
+        controller.setData(AppState.getInstance().getAccount(), AppState.getInstance().getCustomer());
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+
+    public void setCustomer(Customer customer) { this.customer = customer; }
+    public void setAccount(RewardsAccount account) { this.account = account; }
+}
