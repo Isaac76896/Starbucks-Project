@@ -13,23 +13,157 @@ import java.util.*;
 import java.util.stream.*;
 
 public class MenuController {
-    private List<User> menuItems;
-    private List<User> categories;
+    private List<MenuItem> menuItems;
+    private List<String> categories;
+    private Customer customer;
+    private RewardsAccount account;
+    private List<MenuItem> cartItems = new ArrayList<>();
+    private double cartTotal = 0.0;
 
-    public MenuController(List<User> menuItems, List<User> categories) {
-        this.menuItems = menuItems;
-        this.categories = categories;
+    @FXML private Label categoryHeadingLabel;
+    @FXML private HBox filterButtonsBox;
+    @FXML private TextField searchField;
+    @FXML private FlowPane itemCardGrid;
+    @FXML private Button menuButton;
+    @FXML private Button locationsButton;
+    @FXML private Button rewardsButton;
+    @FXML private Button giftCardsButton;
+    @FXML private Button cartButton;
+    @FXML private VBox cartPanel;
+
+    private String activeCategory = null;
+    private String activeSubcategory = null;
+
+    public MenuController() {}
+
+    public void setMenuItems(List<MenuItem> menuItems) { this.menuItems = menuItems; }
+    public void setCategories(List<String> categories) { this.categories = categories; }
+    public List<MenuItem> getMenuItems() { return menuItems; }
+    public List<String> getCategories() { return categories; }
+
+    public void loadMenu() {
+        menuItems = new ArrayList<>();
+        categories = new ArrayList<>();
+
+        try (BufferedReader br = new BufferedReader(new FileReader("data/starbucks_menu.csv"))) {
+            String line = br.readLine();
+            while ((line = br.readLine()) != null) {
+                String[] fields = parseCsvLine(line);
+                if (fields.length < 9) continue;
+                MenuItem item = new MenuItem(
+                        fields[0].trim(), fields[1].trim(), fields[2].trim(),
+                        fields[3].trim(), fields[4].trim(), fields[5].trim(),
+                        fields[6].trim(), fields[7].trim(), fields[8].trim()
+                );
+                menuItems.add(item);
+                String cat = fields[1].trim();
+                if (!categories.contains(cat)) categories.add(cat);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
-    /** Setters and Getters **/
-
-    public void setMenuItems(List<User> menuItems) {
-        this.menuItems = menuItems;
+    private String[] parseCsvLine(String line) {
+        List<String> fields = new ArrayList<>();
+        StringBuilder current = new StringBuilder();
+        boolean inQuotes = false;
+        for (int i = 0; i < line.length(); i++) {
+            char c = line.charAt(i);
+            if (c == '"') {
+                inQuotes = !inQuotes;
+            } else if (c == ',' && !inQuotes) {
+                fields.add(current.toString());
+                current = new StringBuilder();
+            } else {
+                current.append(c);
+            }
+        }
+        fields.add(current.toString());
+        return fields.toArray(new String[0]);
     }
 
-    public void setCategories(List<User> categories) {
-        this.categories = categories;
+    public List<MenuItem> filterByCategory(String category) {
+        return menuItems.stream()
+                .filter(item -> item.getCategory().equalsIgnoreCase(category)
+                        || (item.getSubcategory() != null
+                        && item.getSubcategory().equalsIgnoreCase(category)))
+                .collect(Collectors.toList());
     }
+
+    public List<MenuItem> searchItems(String query) {
+        String lower = query.toLowerCase();
+        return menuItems.stream()
+                .filter(item -> item.getName().toLowerCase().contains(lower)
+                        || (item.getDescription() != null
+                        && item.getDescription().toLowerCase().contains(lower)))
+                .collect(Collectors.toList());
+    }
+
+    public MenuItem getItemDetails(String itemId) {
+        return menuItems.stream()
+                .filter(item -> item.getId().equals(itemId))
+                .findFirst()
+                .orElse(null);
+    }
+
+    @FXML
+    public void initialize() {
+        loadMenu();
+        buildCategoryTabs();
+        displayItems(menuItems);
+        searchField.textProperty().addListener(
+                (obs, oldVal, newVal) -> onSearchChanged(newVal));
+    }
+
+    private void buildCategoryTabs() {
+        Button allBtn = createFilterTab("All", true);
+        allBtn.setOnAction(e -> {
+            activeCategory = null;
+            activeSubcategory = null;
+            categoryHeadingLabel.setText("Menu");
+            buildSubcategoryTabs(null);
+            displayItems(menuItems);
+        });
+        filterButtonsBox.getChildren().add(allBtn);
+
+        for (String cat : categories) {
+            Button btn = createFilterTab(cat, false);
+            btn.setOnAction(e -> {
+                activeCategory = cat;
+                activeSubcategory = null;
+                categoryHeadingLabel.setText(cat);
+                buildSubcategoryTabs(cat);
+                displayItems(filterByCategory(cat));
+            });
+            filterButtonsBox.getChildren().add(btn);
+        }
+    }
+
+    private void buildSubcategoryTabs(String category) {
+        filterButtonsBox.getChildren().clear();
+
+        Button allBtn = createFilterTab("All", category == null);
+        allBtn.setOnAction(e -> {
+            activeCategory = null;
+            activeSubcategory = null;
+            categoryHeadingLabel.setText("Menu");
+            buildSubcategoryTabs(null);
+            displayItems(menuItems);
+        });
+        filterButtonsBox.getChildren().add(allBtn);
+
+        for (String cat : categories) {
+            Button btn = createFilterTab(cat, cat.equals(category));
+            btn.setOnAction(e -> {
+                activeCategory = cat;
+                activeSubcategory = null;
+                categoryHeadingLabel.setText(cat);
+                buildSubcategoryTabs(cat);
+                displayItems(filterByCategory(cat));
+            });
+            filterButtonsBox.getChildren().add(btn);
+        }
 
         if (category != null) {
             List<String> subcats = menuItems.stream()
