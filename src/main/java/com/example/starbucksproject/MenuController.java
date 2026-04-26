@@ -81,8 +81,42 @@ public class MenuController {
         }
     }
 
-    public static List<User> searchItems() {
-        return null;
+    private VBox createItemCard(MenuItem item) {
+        VBox card = new VBox(8);
+        card.setAlignment(Pos.TOP_CENTER);
+        card.setPrefWidth(210);
+        card.setPrefHeight(220);
+        card.setStyle("-fx-background-color: white; -fx-background-radius: 12; " +
+                "-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 6, 0, 0, 2);");
+        card.setPadding(new Insets(0));
+
+        Region imagePlaceholder = new Region();
+        imagePlaceholder.setPrefHeight(120);
+        imagePlaceholder.setMinHeight(120);
+        imagePlaceholder.setMaxWidth(Double.MAX_VALUE);
+        imagePlaceholder.setStyle("-fx-background-color: #1E3932; -fx-background-radius: 12 12 0 0;");
+
+        VBox textArea = new VBox(4);
+        textArea.setPadding(new Insets(8, 12, 10, 12));
+        textArea.setAlignment(Pos.CENTER_LEFT);
+
+        Label nameLabel = new Label(item.getName());
+        nameLabel.setWrapText(true);
+        nameLabel.setStyle("-fx-font-size: 13; -fx-font-weight: bold; -fx-text-fill: #1E3932;");
+        nameLabel.setMaxWidth(180);
+
+        Label priceLabel = new Label(item.getPriceRange() != null ?
+                "$" + item.getPriceRange() : "$" + String.format("%.2f", item.getPrice()));
+        priceLabel.setStyle("-fx-font-size: 12; -fx-text-fill: #666;");
+
+        Button addToOrderBtn = new Button("Add to Order");
+        addToOrderBtn.setStyle("-fx-background-color: #00704A; -fx-text-fill: white; " +
+                "-fx-background-radius: 20; -fx-padding: 4 16; -fx-font-size: 11; -fx-cursor: hand;");
+        addToOrderBtn.setOnAction(e -> addToCart(item));
+
+        textArea.getChildren().addAll(nameLabel, priceLabel, addToOrderBtn);
+        card.getChildren().addAll(imagePlaceholder, textArea);
+        return card;
     }
 
     public static MenuItem getItemDetails() {
