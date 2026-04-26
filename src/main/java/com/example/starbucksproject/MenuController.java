@@ -119,7 +119,11 @@ public class MenuController {
         return card;
     }
 
-    public static MenuItem getItemDetails() {
-        return null;
+    private void addToCart(MenuItem item) {
+        cartItems.add(item);
+        if (item.getPrice() > 0) cartTotal += item.getPrice();
+        cartPanel.setVisible(true);
+        cartPanel.setManaged(true);
+        updateCartPanel();
     }
 }
