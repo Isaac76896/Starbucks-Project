@@ -58,8 +58,17 @@ public class MenuController {
         }
     }
 
-    public List<User> getCategories() {
-        return categories;
+    private Button createFilterTab(String text, boolean active) {
+        Button btn = new Button(text);
+        if (active) {
+            btn.setStyle("-fx-background-color: #1E3932; -fx-text-fill: white; " +
+                    "-fx-background-radius: 20; -fx-padding: 6 16; -fx-font-size: 12; -fx-cursor: hand;");
+        } else {
+            btn.setStyle("-fx-background-color: white; -fx-text-fill: #1E3932; " +
+                    "-fx-border-color: #ccc; -fx-border-radius: 20; -fx-background-radius: 20; " +
+                    "-fx-padding: 6 16; -fx-font-size: 12; -fx-cursor: hand;");
+        }
+        return btn;
     }
 
     public static void loadMenu() {}
