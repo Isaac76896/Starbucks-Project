@@ -1,3 +1,5 @@
+package com.example.starbucksproject;
+
 import java.util.Date;
 import java.util.List;
 
@@ -15,8 +17,6 @@ public class Order {
         this.totalPrice = totalPrice;
         this.timeStamp = timeStamp;
     }
-
-    /** Setters and Getters **/
 
     public void setOrderId(String orderId) {
         this.orderId = orderId;
@@ -58,7 +58,14 @@ public class Order {
         return timeStamp;
     }
 
-    public double calctotal() {
-        return 0;
+    public double calcTotal() {
+        double total = 0.0;
+
+        for (OrderItem item : items) {
+            total += item.calcSubtotal();
+        }
+
+        this.totalPrice = total;
+        return total;
     }
 }

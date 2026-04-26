@@ -1,4 +1,7 @@
+package com.example.starbucksproject;
+
 import java.util.Date;
+import java.util.UUID;
 
 public class GiftCard {
     private String cardNumber;
@@ -13,7 +16,15 @@ public class GiftCard {
         this.isActive = isActive;
     }
 
-    /** Setters and Getters **/
+    // Optional helper constructor (auto-generate card number)
+    public GiftCard(double balance, Date expirationDate) {
+        this.cardNumber = UUID.randomUUID().toString();
+        this.balance = balance;
+        this.expirationDate = expirationDate;
+        this.isActive = true;
+    }
+
+    // Getters and Setters //
 
     public String getCardNumber() {
         return cardNumber;
@@ -47,10 +58,28 @@ public class GiftCard {
         isActive = active;
     }
 
-    public void applyToOrder(double amount) { }
-
-    public boolean isValid() {
-        return false;
+    // Apply card to an order *//
+    public void applyToOrder(double amount) {
+        if (isValid() && amount > 0) {
+            if (balance >= amount) {
+                balance -= amount;
+            } else {
+                balance = 0;
+            }
+        }
     }
 
+    // Check if card is usable *//
+    public boolean isValid() {
+        Date now = new Date();
+        return isActive && expirationDate.after(now) && balance > 0;
+    }
+
+    @Override
+    public String toString() {
+        return "Card#: " + cardNumber +
+                " | Balance: $" + balance +
+                " | Expires: " + expirationDate +
+                " | Active: " + isActive;
+    }
 }

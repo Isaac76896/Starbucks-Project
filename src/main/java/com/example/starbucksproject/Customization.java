@@ -1,3 +1,5 @@
+package com.example.starbucksproject;
+
 public class Customization {
     private String customId;
     private String type;

@@ -14,19 +14,28 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #EBEBEB;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #EBEBEB;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.starbucksproject.RewardsController">
 
     <top>
-        <HBox spacing="20" style="-fx-background-color: white; -fx-padding: 12 24 12 24; -fx-alignment: center-left; -fx-border-color: #E0E0E0; -fx-border-width: 0 0 1 0;">
-            <ImageView fitHeight="60" fitWidth="60" preserveRatio="true">
-                <image><Image url="@starbucks-logo.png" /></image>
-            </ImageView>
-         <Region prefHeight="60.0" prefWidth="327.0" />
-            <Button fx:id="menuButton" style="-fx-background-color: transparent; -fx-font-size: 14;" text="Menu" />
-            <Button fx:id="locationsButton" style="-fx-background-color: transparent; -fx-font-size: 14;" text="Locations" />
-            <Button fx:id="rewardsButton" style="-fx-background-color: transparent; -fx-font-size: 14; -fx-font-weight: bold;" text="Rewards" />
-            <Button fx:id="giftCardsButton" style="-fx-background-color: transparent; -fx-font-size: 14;" text="Gift Cards" />
-         <Button fx:id="cartButton" mnemonicParsing="false" prefHeight="27.0" prefWidth="49.0" style="-fx-background-color: transparent; -fx-font-size: 14;" text="Cart" />
+        <HBox alignment="CENTER_LEFT" spacing="0" prefHeight="50"
+              style="-fx-background-color: white; -fx-border-color: #e0e0e0; -fx-border-width: 0 0 1 0; -fx-padding: 0 20 0 20;">
+            <Label text="STARBUCKS" style="-fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: #1E3932;"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button fx:id="menuButton" text="Menu"
+                    onAction="#menuButtonClick"
+                    style="-fx-background-color: transparent; -fx-text-fill: #1E3932; -fx-font-size: 13; -fx-cursor: hand;"/>
+            <Button fx:id="locationsButton" text="Locations"
+                    onAction="#locationsButtonClick"
+                    style="-fx-background-color: transparent; -fx-text-fill: #1E3932; -fx-font-size: 13; -fx-cursor: hand;"/>
+            <Button fx:id="rewardsButton" text="Rewards"
+                    onAction="#rewardsButtonClick"
+                    style="-fx-background-color: transparent; -fx-text-fill: #1E3932; -fx-font-size: 13; -fx-font-weight: bold; -fx-cursor: hand; -fx-underline: true;"/>
+            <Button fx:id="giftCardsButton" text="Gift Cards"
+                    onAction="#giftCardsButtonClick"
+                    style="-fx-background-color: transparent; -fx-text-fill: #1E3932; -fx-font-size: 13; -fx-cursor: hand;"/>
+            <Button fx:id="cartButton" text="Cart"
+                    onAction="#orderButtonClick"
+                    style="-fx-background-color: transparent; -fx-text-fill: #1E3932; -fx-font-size: 13; -fx-cursor: hand;"/>
         </HBox>
     </top>
 
@@ -35,29 +44,21 @@
             <content>
                 <VBox spacing="20" style="-fx-padding: 32; -fx-background-color: #EBEBEB;">
 
-                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome, Rain">
-                        <font><Font size="24.0" /></font>
-                    </Text>
+                    <Label fx:id="welcomeLabel" text="Welcome, Rain" style="-fx-font-size: 24;"/>
 
                     <HBox spacing="16">
                         <VBox spacing="12" style="-fx-background-color: #1E3932; -fx-padding: 24; -fx-background-radius: 16;" HBox.hgrow="ALWAYS">
                             <HBox spacing="10" style="-fx-alignment: center-left;">
-                                <Label text="★" textFill="#CBA258">
-                                    <font><Font size="42.0" /></font>
+                                <Label text="★" style="-fx-text-fill: yellow; -fx-font-size: 42;">
                                 </Label>
-                                <Label fx:id="starBalanceLabel" text="300 stars" textFill="WHITE">
-                                    <font><Font size="24.0" /></font>
+                                <Label fx:id="starBalanceLabel" text="300 stars" style="-fx-text-fill: white; -fx-font-size: 24;">
                                 </Label>
                             </HBox>
                             <ProgressBar fx:id="tierProgressBar" maxWidth="Infinity" progress="0.6" style="-fx-accent: #CBA258;" />
                             <HBox>
-                                <Label text="Way to go! Keep earning" textFill="#9EC9A8">
-                                    <font><Font size="12.0" /></font>
-                                </Label>
+                                <Label text="Way to go! Keep earning" style="-fx-text-fill: #9EC9A8; -fx-font-size: 12;"/>
                                 <Region HBox.hgrow="ALWAYS" />
-                                <Label fx:id="tierGoalLabel" text="500 stars to Gold" textFill="#9EC9A8">
-                                    <font><Font size="12.0" /></font>
-                                </Label>
+                                <Label fx:id="tierGoalLabel" text="500 stars to Gold" style="-fx-text-fill: #9EC9A8; -fx-font-size: 12;"/>
                             </HBox>
                         </VBox>
 

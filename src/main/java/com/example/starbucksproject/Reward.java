@@ -1,3 +1,7 @@
+package com.example.starbucksproject;
+
+
+
 public class Reward {
     private String rewardId;
     private String description;

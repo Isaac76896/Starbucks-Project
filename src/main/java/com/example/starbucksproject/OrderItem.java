@@ -1,3 +1,5 @@
+package com.example.starbucksproject;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,14 +9,13 @@ public class OrderItem {
     private List<Customization> customizations;
     private double subtotal;
 
-    public OrderItem(MenuItem menuItem, int quantity) {
+    public OrderItem(MenuItem menuItem, int quantity)
+    {
         this.menuItem = menuItem;
         this.quantity = quantity;
         this.customizations = new ArrayList<>();
-        this.subtotal = 0;
+        this.subtotal = 0.0;
     }
-
-    /** Setters and Getters **/
 
     public void setMenuItem(MenuItem menuItem) {
         this.menuItem = menuItem;
@@ -48,7 +49,19 @@ public class OrderItem {
         return subtotal;
     }
 
+    public void addCustomization(Customization customization)
+    {
+        customizations.add(customization);
+    }
+
     public double calcSubtotal() {
-        return menuItem.getPrice() * quantity;
+        double customizationCost = 0.0;
+
+        for (Customization customization : customizations) {
+            customizationCost += customization.getExtraCost();
+        }
+
+        subtotal = (menuItem.getPrice() + customizationCost) * quantity;
+        return subtotal;
     }
 }

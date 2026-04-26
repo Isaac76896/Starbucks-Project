@@ -1,12 +1,8 @@
+package com.example.starbucksproject;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.stream.Collectors;
-
-import javafx.application.Application;
-import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.stage.Stage;
 
 
 public class RewardsAccount {
@@ -16,7 +12,7 @@ public class RewardsAccount {
     private List<Reward> offers;
     private Date expiryDate;
 
-    public RewardsAccount(String accountId, String tier, int totalStars, List<Reward> offers, Date expiryDate) {
+    public RewardsAccount(String accountId, String tier, int totalStars, List<Order> offers, Date expiryDate) {
         this.accountId = accountId;
         this.tier = tier;
         this.totalStars = totalStars;
@@ -66,9 +62,7 @@ public class RewardsAccount {
         return expiryDate;
     }
 
-    public List<Reward> getAvailRewards() {
-        return offers.stream()
-                .filter(r -> !r.isRedeemed() && r.getStarCost() <= totalStars)
-                .collect(Collectors.toList());
+    public List<Order> getAvailRewards() {
+        return null;
     }
 }

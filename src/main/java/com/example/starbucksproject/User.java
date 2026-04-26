@@ -1,3 +1,8 @@
+package com.example.starbucksproject;
+
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
+
 public class User {
     private String userId;
     private String name;
@@ -11,7 +16,7 @@ public class User {
         this.passwordHash = passwordHash;
     }
 
-    /** Setters and Getters **/
+    // Setters and Getters //
 
     public void setUserId(String userId) {
         this.userId = userId;
@@ -47,5 +52,17 @@ public class User {
 
     public boolean authenticate() {
         return false;
+    }
+
+    public void sendGiftCardNotification(String recipientEmail, double amount) {
+        Alert alert = new Alert(AlertType.INFORMATION);
+        alert.setTitle("Gift Card Sent");
+        alert.setHeaderText("Email Sent Successfully!");
+        alert.setContentText(
+                "A gift card of $" + amount +
+                        " has been purchased and sent to:\n" + recipientEmail
+        );
+
+        alert.showAndWait();
     }
 }

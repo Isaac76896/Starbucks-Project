@@ -1,12 +1,15 @@
+package com.example.starbucksproject;
+
 import javafx.application.Application;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import org.kordamp.ikonli.Ikonli;
+import javafx.stage.Stage;
 
-import javax.swing.*;
 import java.io.IOException;
 import java.util.List;
 
@@ -29,10 +32,14 @@ public class RewardsController {
     @FXML Label tierGoalLabel;
     @FXML Label welcomeLabel;
 
+    public RewardsController() {
 
-    public RewardsController(RewardsAccount account, Customer customer) {
+    }
+
+    public void setData(RewardsAccount account, Customer customer) {
         this.account = account;
         this.customer = customer;
+        updateUI();
     }
 
     /** Setters and Getters **/
@@ -103,8 +110,7 @@ public class RewardsController {
         }
     }
 
-    @FXML
-    public void initialize() {
+    public void updateUI() {
         welcomeLabel.setText("Welcome, " + customer.getName());
 
         int stars = account.getTotalStars();
@@ -124,5 +130,62 @@ public class RewardsController {
         }
 
         howitWorksArea.setText("1. Pay with the app to earn 2 stars per $1.\n2. Redeem stars for free drinks and food.\n3. Green: 0-499 stars | Gold: 500-2499 | Reserve: 2500+");
+    }
+
+    @FXML
+    public void menuButtonClick(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Menu Screen.fxml"));
+        Scene scene = new Scene(loader.load());
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        MenuController controller = loader.getController();
+        controller.setCustomer(customer);
+        controller.setAccount(account);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    public void orderButtonClick(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Order View.fxml"));
+        Parent root = loader.load();
+        OrderController controller = loader.getController();
+        controller.setCustomer(customer);
+        controller.setAccount(account);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+
+    @FXML
+    public void giftCardsButtonClick(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Gift Cards.fxml"));
+        Parent root = loader.load();
+        GiftCardController controller = loader.getController();
+        controller.setCustomer(customer);
+        controller.setAccount(account);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+
+    @FXML
+    public void locationsButtonClick(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Store Screen.fxml"));
+        Scene scene = new Scene(loader.load());
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        StoreController controller = loader.getController();
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    public void rewardsButtonClick(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("RewardsScreen.fxml"));
+        Parent root = loader.load();
+        RewardsController controller = loader.getController();
+        controller.setData(AppState.getInstance().getAccount(), AppState.getInstance().getCustomer());
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
     }
 }
