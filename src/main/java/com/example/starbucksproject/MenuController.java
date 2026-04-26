@@ -73,8 +73,12 @@ public class MenuController {
 
     private List<MenuItem> currentDisplayedItems = new ArrayList<>();
 
-    public static List<User> filterByCategory() {
-        return null;
+    private void displayItems(List<MenuItem> items) {
+        currentDisplayedItems = items;
+        itemCardGrid.getChildren().clear();
+        for (MenuItem item : items) {
+            itemCardGrid.getChildren().add(createItemCard(item));
+        }
     }
 
     public static List<User> searchItems() {
