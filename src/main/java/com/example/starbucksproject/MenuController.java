@@ -126,4 +126,9 @@ public class MenuController {
         cartPanel.setManaged(true);
         updateCartPanel();
     }
-}
+
+    private void removeFromCart(MenuItem item) {
+        cartItems.remove(item);
+        if (item.getPrice() > 0) cartTotal -= item.getPrice();
+        updateCartPanel();
+    }
