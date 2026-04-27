@@ -13,7 +13,7 @@ import java.io.*;
 import java.util.*;
 import java.util.stream.*;
 
-public class StoreController {
+public class StoreController extends BaseController {
     private List<Store> stores;
     private double[] userLocation;
     private Customer customer;
@@ -28,6 +28,7 @@ public class StoreController {
     @FXML private Button rewardsButton;
     @FXML private Button giftCardsButton;
     @FXML private Button cartButton;
+    @FXML private VBox cartPanel;
 
     public StoreController() {
         this.stores = new ArrayList<>();
@@ -38,6 +39,9 @@ public class StoreController {
     public void setUserLocation(double[] userLocation) { this.userLocation = userLocation; }
     public List<Store> getStores() { return stores; }
     public double[] getUserLocation() { return userLocation; }
+
+    @Override
+    protected VBox getCartPanel() { return cartPanel; }
 
     public List<Store> findNearby() {
         return stores.stream()
@@ -93,11 +97,13 @@ public class StoreController {
     }
 
     @FXML
+    public void cartButtonClick(ActionEvent event) {
+        toggleCart();
+    }
+
+    @FXML
     public void initialize() {
-        loadStores();
-        displayStoreCards(stores);
-        searchField.textProperty().addListener(
-                (obs, oldVal, newVal) -> onSearchChanged(newVal));
+        initCart();
     }
 
     private List<Store> currentDisplayedStores = new ArrayList<>();

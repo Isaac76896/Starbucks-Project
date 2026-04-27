@@ -10,8 +10,6 @@
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.web.WebView?>
-
 
 <VBox xmlns:fx="http://javafx.com/fxml" prefWidth="1024" prefHeight="700"
       fx:controller="com.example.starbucksproject.StoreController"
@@ -35,7 +33,7 @@
                 onAction="#giftCardsButtonClick"
                 style="-fx-background-color: transparent; -fx-text-fill: #1E3932; -fx-font-size: 13; -fx-cursor: hand;"/>
         <Button fx:id="cartButton" text="Cart"
-                onAction="#orderButtonClick"
+                onAction="#cartButtonClick"
                 style="-fx-background-color: transparent; -fx-text-fill: #1E3932; -fx-font-size: 13; -fx-cursor: hand;"/>
     </HBox>
 
@@ -79,6 +77,10 @@
                    style="-fx-text-fill: #999; -fx-font-size: 16;"
                    StackPane.alignment="CENTER"/>
         </StackPane>
+
+        <VBox fx:id="cartPanel" prefWidth="300" spacing="16"
+              style="-fx-background-color: white; -fx-padding: 24; -fx-border-color: #e0e0e0; -fx-border-width: 0 0 0 1;"
+              visible="false" managed="false"/>
 
     </HBox>
 

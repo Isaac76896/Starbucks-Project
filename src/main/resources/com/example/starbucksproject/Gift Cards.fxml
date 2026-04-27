@@ -98,4 +98,10 @@
         </HBox>
     </center>
 
+    <right>
+        <VBox fx:id="cartPanel" prefWidth="300" spacing="16"
+              style="-fx-background-color: white; -fx-padding: 24; -fx-border-color: #e0e0e0; -fx-border-width: 0 0 0 1;"
+              visible="false" managed="false"/>
+    </right>
+
 </BorderPane>

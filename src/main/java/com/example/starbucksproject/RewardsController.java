@@ -8,12 +8,13 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.List;
 
-public class RewardsController {
+public class RewardsController extends BaseController {
     private RewardsAccount account;
     private Customer customer;
 
@@ -31,6 +32,7 @@ public class RewardsController {
     @FXML ProgressBar tierProgressBar;
     @FXML Label tierGoalLabel;
     @FXML Label welcomeLabel;
+    @FXML private VBox cartPanel;
 
     public RewardsController() {
 
@@ -59,6 +61,9 @@ public class RewardsController {
     public Customer getCustomer() {
         return customer;
     }
+
+    @Override
+    protected VBox getCartPanel() { return cartPanel; }
 
     public int viewStarBalance() {
         return account.getTotalStars();
@@ -90,6 +95,11 @@ public class RewardsController {
         int starsEarned = (int) (order.getTotalPrice() * 2);
         account.setTotalStars(account.getTotalStars() + starsEarned);
         updateTier();
+    }
+
+    @FXML
+    public void cartButtonClick(ActionEvent event) {
+        toggleCart();
     }
 
     /** opens the application **/
@@ -187,5 +197,10 @@ public class RewardsController {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(new Scene(root));
         stage.show();
+    }
+
+    @FXML
+    public void initialize() {
+        initCart();
     }
 }

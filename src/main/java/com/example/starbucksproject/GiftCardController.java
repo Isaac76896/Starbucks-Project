@@ -12,7 +12,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class GiftCardController {
+public class GiftCardController extends BaseController {
     private Customer customer;
     private RewardsAccount account;
     private double selectedAmount = 25.0;
@@ -25,15 +25,20 @@ public class GiftCardController {
     @FXML private TextField nameField;
     @FXML private TextField emailField;
     @FXML private TextField messageField;
+    @FXML private VBox cartPanel;
 
     public GiftCardController() {}
 
     public void setCustomer(Customer customer) { this.customer = customer; }
     public void setAccount(RewardsAccount account) { this.account = account; }
 
+    @Override
+    protected VBox getCartPanel() { return cartPanel; }
+
     @FXML
     public void initialize() {
         updateOrderSummary();
+        initCart();
     }
 
     private void updateOrderSummary() {
@@ -109,14 +114,7 @@ public class GiftCardController {
     }
 
     @FXML
-    public void cartButtonClick(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("Order View.fxml"));
-        Parent root = loader.load();
-        OrderController controller = loader.getController();
-        controller.setCustomer(customer);
-        controller.setAccount(account);
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(new Scene(root));
-        stage.show();
+    public void cartButtonClick(ActionEvent event) {
+        toggleCart();
     }
 }
