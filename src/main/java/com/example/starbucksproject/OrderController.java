@@ -5,7 +5,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -102,22 +101,22 @@ public class OrderController
     @FXML
     public void menuButtonClick(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Menu Screen.fxml"));
-        Scene scene = new Scene(loader.load());
+        Parent root = loader.load();
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         MenuController controller = loader.getController();
         controller.setCustomer(customer);
         controller.setAccount(account);
-        stage.setScene(scene);
+        SceneNavigator.setScene(stage, root);
         stage.show();
     }
 
     @FXML
     public void orderButtonClick(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Order Screen.fxml"));
-        Scene scene = new Scene(loader.load());
+        Parent root = loader.load();
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         OrderController controller = loader.getController();
-        stage.setScene(scene);
+        SceneNavigator.setScene(stage, root);
         stage.show();
     }
 
@@ -129,17 +128,17 @@ public class OrderController
         controller.setCustomer(customer);
         controller.setAccount(account);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(new Scene(root));
+        SceneNavigator.setScene(stage, root);
         stage.show();
     }
 
     @FXML
     public void locationsButtonClick(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Store Screen.fxml"));
-        Scene scene = new Scene(loader.load());
+        Parent root = loader.load();
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         StoreController controller = loader.getController();
-        stage.setScene(scene);
+        SceneNavigator.setScene(stage, root);
         stage.show();
     }
 
@@ -150,7 +149,7 @@ public class OrderController
         RewardsController controller = loader.getController();
         controller.setData(AppState.getInstance().getAccount(), AppState.getInstance().getCustomer());
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(new Scene(root));
+        SceneNavigator.setScene(stage, root);
         stage.show();
     }
 

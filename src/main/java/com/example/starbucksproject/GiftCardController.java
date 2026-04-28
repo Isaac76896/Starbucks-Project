@@ -5,7 +5,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
@@ -74,7 +73,7 @@ public class GiftCardController extends BaseController {
         controller.setCustomer(customer);
         controller.setAccount(account);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(new Scene(root));
+        SceneNavigator.setScene(stage, root);
         stage.show();
     }
 
@@ -86,7 +85,7 @@ public class GiftCardController extends BaseController {
         controller.setCustomer(customer);
         controller.setAccount(account);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(new Scene(root));
+        SceneNavigator.setScene(stage, root);
         stage.show();
     }
 
@@ -97,7 +96,7 @@ public class GiftCardController extends BaseController {
         RewardsController controller = loader.getController();
         controller.setData(account, customer);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(new Scene(root));
+        SceneNavigator.setScene(stage, root);
         stage.show();
     }
 
@@ -109,7 +108,7 @@ public class GiftCardController extends BaseController {
         controller.setCustomer(customer);
         controller.setAccount(account);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(new Scene(root));
+        SceneNavigator.setScene(stage, root);
         stage.show();
     }
 
