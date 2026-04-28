@@ -25,7 +25,7 @@ public class HelloApplication extends Application {
         AppState.getInstance().setCustomer(customer);
         AppState.getInstance().setAccount(account);
 
-        Scene scene = new Scene(root, 1024, 700);
+        Scene scene = SceneNavigator.createScene(root);
         stage.setTitle("Starbucks");
         stage.setScene(scene);
         stage.show();

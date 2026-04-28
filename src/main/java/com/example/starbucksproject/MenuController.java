@@ -282,7 +282,7 @@ public class MenuController extends BaseController {
         controller.setCustomer(customer);
         controller.setAccount(account);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(new Scene(root));
+        SceneNavigator.setScene(stage, root);
         stage.show();
     }
 
@@ -299,7 +299,7 @@ public class MenuController extends BaseController {
         controller.setCustomer(customer);
         controller.setAccount(account);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(new Scene(root));
+        SceneNavigator.setScene(stage, root);
         stage.show();
     }
 
@@ -311,7 +311,7 @@ public class MenuController extends BaseController {
         controller.setCustomer(customer);
         controller.setAccount(account);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(new Scene(root));
+        SceneNavigator.setScene(stage, root);
         stage.show();
     }
 
@@ -322,7 +322,7 @@ public class MenuController extends BaseController {
         RewardsController controller = loader.getController();
         controller.setData(AppState.getInstance().getAccount(), AppState.getInstance().getCustomer());
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(new Scene(root));
+        SceneNavigator.setScene(stage, root);
         stage.show();
     }
 

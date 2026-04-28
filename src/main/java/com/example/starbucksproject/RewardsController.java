@@ -113,7 +113,7 @@ public class RewardsController extends BaseController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("RewardsScreen.fxml"));
             loader.setController(this);
             Parent root = loader.load();
-            return new Scene(root);
+            return SceneNavigator.createScene(root);
         } catch (IOException e) {
             e.printStackTrace();
             return null;
@@ -145,12 +145,12 @@ public class RewardsController extends BaseController {
     @FXML
     public void menuButtonClick(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Menu Screen.fxml"));
-        Scene scene = new Scene(loader.load());
+        Parent root = loader.load();
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         MenuController controller = loader.getController();
         controller.setCustomer(customer);
         controller.setAccount(account);
-        stage.setScene(scene);
+        SceneNavigator.setScene(stage, root);
         stage.show();
     }
 
@@ -162,7 +162,7 @@ public class RewardsController extends BaseController {
         controller.setCustomer(customer);
         controller.setAccount(account);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(new Scene(root));
+        SceneNavigator.setScene(stage, root);
         stage.show();
     }
 
@@ -174,17 +174,17 @@ public class RewardsController extends BaseController {
         controller.setCustomer(customer);
         controller.setAccount(account);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(new Scene(root));
+        SceneNavigator.setScene(stage, root);
         stage.show();
     }
 
     @FXML
     public void locationsButtonClick(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Store Screen.fxml"));
-        Scene scene = new Scene(loader.load());
+        Parent root = loader.load();
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         StoreController controller = loader.getController();
-        stage.setScene(scene);
+        SceneNavigator.setScene(stage, root);
         stage.show();
     }
 
@@ -195,7 +195,7 @@ public class RewardsController extends BaseController {
         RewardsController controller = loader.getController();
         controller.setData(AppState.getInstance().getAccount(), AppState.getInstance().getCustomer());
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(new Scene(root));
+        SceneNavigator.setScene(stage, root);
         stage.show();
     }
 
