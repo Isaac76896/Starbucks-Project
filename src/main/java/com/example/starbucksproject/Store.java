@@ -1,8 +1,6 @@
 package com.example.starbucksproject;
 
 import java.util.List;
-import java.util.*;
-import java.util.Arrays;
 
 public class Store {
     private String storeId;
@@ -10,13 +8,16 @@ public class Store {
     private String hours;
     private double[] coordinates;
     private List<String> amenities;
+    private String imageUrl;
 
-    public Store(String storeId, String address, String hours, double[] coordinates, List<String> amenities) {
+
+    public Store(String storeId, String address, String hours, double[] coordinates, List<String> amenities, String imageUrl) {
         this.storeId = storeId;
         this.address = address;
         this.hours = hours;
         this.coordinates = coordinates;
         this.amenities = amenities;
+        this.imageUrl = imageUrl;
     }
 
     public void setStoreId(String storeId) { this.storeId = storeId; }
@@ -24,12 +25,14 @@ public class Store {
     public void setHours(String hours) { this.hours = hours; }
     public void setCoordinates(double[] coordinates) { this.coordinates = coordinates; }
     public void setAmenities(List<String> amenities) { this.amenities = amenities; }
+    public void setImageUrl(String imageUrl) { this.imageUrl = imageUrl; }
 
     public String getStoreId() { return storeId; }
     public String getAddress() { return address; }
     public String getHours() { return hours; }
     public double[] getCoordinates() { return coordinates; }
     public List<String> getAmenities() { return amenities; }
+    public String getImageUrl() { return imageUrl; }
 
     public double distanceTo(double[] userLocation) {
         if (coordinates == null || userLocation == null
@@ -55,4 +58,5 @@ public class Store {
     public String toString() {
         return address + " (" + hours + ")";
     }
+
 }

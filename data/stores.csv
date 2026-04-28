@@ -1,0 +1,9 @@
+storeId,address,hours,lat,lon,amenities,imageUrl
+SA001,17619 La Cantera Pkwy San Antonio TX 78257,Mon-Sun: 5:30AM - 10:00PM,29.6005,-98.6097,"Drive-Thru,Mobile Order,WiFi",https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=400
+SA002,255 E Basse Rd San Antonio TX 78209,Mon-Sun: 6:00AM - 9:00PM,29.4871,-98.4586,"Dine-In,WiFi,Mobile Order",https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400
+SA003,7822 Culebra Rd San Antonio TX 78251,Mon-Sun: 5:00AM - 10:00PM,29.4985,-98.6401,"Drive-Thru,Mobile Order",https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400
+SA004,3030 Thousand Oaks Dr San Antonio TX 78247,Mon-Sun: 6:00AM - 9:30PM,29.5852,-98.3901,"Drive-Thru,WiFi,Dine-In",https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=400
+SA005,1819 N Loop 1604 W San Antonio TX 78248,Mon-Sun: 5:30AM - 10:30PM,29.6101,-98.5234,"Drive-Thru,Mobile Order,WiFi",https://images.unsplash.com/photo-1511920170033-f8396924c348?w=400
+SA006,6750 W Loop 1604 N San Antonio TX 78254,Mon-Sun: 5:00AM - 11:00PM,29.5723,-98.6789,"Drive-Thru,Dine-In,WiFi",https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=400
+SA007,100 Alamo Plaza San Antonio TX 78205,Mon-Sun: 6:00AM - 8:00PM,29.4260,-98.4861,"Dine-In,WiFi",https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=400
+SA008,4522 Fredericksburg Rd San Antonio TX 78201,Mon-Sun: 5:30AM - 9:00PM,29.4712,-98.5341,"Drive-Thru,Mobile Order",https://images.unsplash.com/photo-1525610553991-2bede1a236e2?w=400

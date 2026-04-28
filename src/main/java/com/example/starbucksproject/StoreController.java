@@ -8,6 +8,12 @@ import javafx.scene.*;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.StackPane;
 
 import java.io.*;
 import java.util.*;
@@ -29,6 +35,7 @@ public class StoreController extends BaseController {
     @FXML private Button giftCardsButton;
     @FXML private Button cartButton;
     @FXML private VBox cartPanel;
+    @FXML private StackPane mapArea;
 
     public StoreController() {
         this.stores = new ArrayList<>();
@@ -103,9 +110,12 @@ public class StoreController extends BaseController {
 
     @FXML
     public void initialize() {
+        loadStores();
+        displayStoreCards(stores);
+        searchField.textProperty().addListener(
+                (obs, oldVal, newVal) -> onSearchChanged(newVal));
         initCart();
     }
-
     private List<Store> currentDisplayedStores = new ArrayList<>();
 
     private void displayStoreCards(List<Store> storeList) {
@@ -126,11 +136,51 @@ public class StoreController extends BaseController {
         mapPlaceholderLabel.setText("Location displayed on map");
     }
 
+    private void loadStores() {
+        stores = new ArrayList<>();
+        try (BufferedReader br = new BufferedReader(new FileReader("data/stores.csv"))) {
+            String line = br.readLine(); // skip header
+            while ((line = br.readLine()) != null) {
+                String[] fields = line.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)");
+                if (fields.length < 7) continue;
+                String storeId = fields[0].trim();
+                String address = fields[1].trim();
+                String hours = fields[2].trim();
+                double lat = Double.parseDouble(fields[3].trim());
+                double lon = Double.parseDouble(fields[4].trim());
+                List<String> amenities = Arrays.asList(
+                        fields[5].trim().replaceAll("\"", "").split(","));
+                String imageUrl = fields[6].trim();
+                stores.add(new Store(storeId, address, hours,
+                        new double[]{lat, lon}, amenities, imageUrl));
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     private VBox createStoreCard(Store store, int index) {
         VBox card = new VBox(4);
-        card.setPadding(new Insets(12, 14, 12, 14));
+        card.setPadding(new Insets(0, 0, 12, 0));
         card.setStyle("-fx-background-color: white; -fx-background-radius: 10; " +
                 "-fx-border-color: #e0e0e0; -fx-border-radius: 10; -fx-cursor: hand;");
+
+        // Image
+        if (store.getImageUrl() != null && !store.getImageUrl().isEmpty()) {
+            try {
+                ImageView imageView = new ImageView(new Image(store.getImageUrl(), 280, 120, true, true));
+                imageView.setFitWidth(280);
+                imageView.setFitHeight(120);
+                imageView.setStyle("-fx-background-radius: 10 10 0 0;");
+                card.getChildren().add(imageView);
+            } catch (Exception e) {
+                // if image fails to load, skip it
+            }
+        }
+
+        // Text content
+        VBox textArea = new VBox(4);
+        textArea.setPadding(new Insets(10, 14, 10, 14));
 
         Label nameLabel = new Label(store.getAddress());
         nameLabel.setWrapText(true);
@@ -139,17 +189,18 @@ public class StoreController extends BaseController {
         Label hoursLabel = new Label(store.getHours());
         hoursLabel.setStyle("-fx-font-size: 11; -fx-text-fill: #666;");
 
+        textArea.getChildren().addAll(nameLabel, hoursLabel);
+
         if (store.getAmenities() != null && !store.getAmenities().isEmpty()) {
             Label amenitiesLabel = new Label(String.join(" · ", store.getAmenities()));
             amenitiesLabel.setStyle("-fx-font-size: 10; -fx-text-fill: #999;");
             amenitiesLabel.setWrapText(true);
-            card.getChildren().addAll(nameLabel, hoursLabel, amenitiesLabel);
-        } else {
-            card.getChildren().addAll(nameLabel, hoursLabel);
+            textArea.getChildren().add(amenitiesLabel);
         }
 
-        card.setOnMouseClicked(e -> onStoreCardClicked(store));
+        card.getChildren().add(textArea);
 
+        card.setOnMouseClicked(e -> onStoreCardClicked(store));
         card.setOnMouseEntered(e ->
                 card.setStyle("-fx-background-color: #f5f5f5; -fx-background-radius: 10; " +
                         "-fx-border-color: #00704A; -fx-border-radius: 10; -fx-cursor: hand;"));
@@ -161,38 +212,57 @@ public class StoreController extends BaseController {
     }
 
     private void onStoreCardClicked(Store store) {
-        StringBuilder sb = new StringBuilder();
-        sb.append(store.getAddress()).append("\n");
-        sb.append(store.getHours());
-        if (store.getCoordinates() != null && store.getCoordinates().length >= 2) {
-            sb.append("\n").append(String.format("%.4f, %.4f",
-                    store.getCoordinates()[0], store.getCoordinates()[1]));
-        }
-        if (userLocation != null && userLocation.length >= 2) {
-            double dist = store.distanceTo(userLocation);
-            sb.append(String.format("\n%.1f km away", dist));
-        }
-        mapPlaceholderLabel.setText(sb.toString());
-    }
+        mapArea.getChildren().clear();
 
-    private void loadStores() {
-        stores = new ArrayList<>();
-        stores.add(new Store("SA001", "17619 La Cantera Pkwy, San Antonio, TX 78257", "Mon-Sun: 5:30AM - 10:00PM",
-                new double[]{29.6005, -98.6097}, Arrays.asList("Drive-Thru", "Mobile Order", "WiFi")));
-        stores.add(new Store("SA002", "255 E Basse Rd, San Antonio, TX 78209", "Mon-Sun: 6:00AM - 9:00PM",
-                new double[]{29.4871, -98.4586}, Arrays.asList("Dine-In", "WiFi", "Mobile Order")));
-        stores.add(new Store("SA003", "7822 Culebra Rd, San Antonio, TX 78251", "Mon-Sun: 5:00AM - 10:00PM",
-                new double[]{29.4985, -98.6401}, Arrays.asList("Drive-Thru", "Mobile Order")));
-        stores.add(new Store("SA004", "3030 Thousand Oaks Dr, San Antonio, TX 78247", "Mon-Sun: 6:00AM - 9:30PM",
-                new double[]{29.5852, -98.3901}, Arrays.asList("Drive-Thru", "WiFi", "Dine-In")));
-        stores.add(new Store("SA005", "1819 N Loop 1604 W, San Antonio, TX 78248", "Mon-Sun: 5:30AM - 10:30PM",
-                new double[]{29.6101, -98.5234}, Arrays.asList("Drive-Thru", "Mobile Order", "WiFi")));
-        stores.add(new Store("SA006", "6750 W Loop 1604 N, San Antonio, TX 78254", "Mon-Sun: 5:00AM - 11:00PM",
-                new double[]{29.5723, -98.6789}, Arrays.asList("Drive-Thru", "Dine-In", "WiFi")));
-        stores.add(new Store("SA007", "100 Alamo Plaza, San Antonio, TX 78205", "Mon-Sun: 6:00AM - 8:00PM",
-                new double[]{29.4260, -98.4861}, Arrays.asList("Dine-In", "WiFi")));
-        stores.add(new Store("SA008", "4522 Fredericksburg Rd, San Antonio, TX 78201", "Mon-Sun: 5:30AM - 9:00PM",
-                new double[]{29.4712, -98.5341}, Arrays.asList("Drive-Thru", "Mobile Order")));
+        VBox infoCard = new VBox(12);
+        infoCard.setAlignment(Pos.CENTER_LEFT);
+        infoCard.setMaxWidth(400);
+        infoCard.setPadding(new Insets(32));
+        infoCard.setStyle("-fx-background-color: white; -fx-background-radius: 16; " +
+                "-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 12, 0, 0, 4);");
+
+        Label nameLabel = new Label(store.getAddress());
+        nameLabel.setWrapText(true);
+        nameLabel.setStyle("-fx-font-size: 18; -fx-font-weight: bold; -fx-text-fill: #1E3932;");
+
+        Label hoursLabel = new Label("🕐 " + store.getHours());
+        hoursLabel.setStyle("-fx-font-size: 14; -fx-text-fill: #444;");
+
+        if (userLocation != null && userLocation[0] != 0) {
+            double dist = store.distanceTo(userLocation);
+            Label distLabel = new Label(String.format("📍 %.1f km away", dist));
+            distLabel.setStyle("-fx-font-size: 13; -fx-text-fill: #666;");
+            infoCard.getChildren().add(distLabel);
+        }
+
+        if (store.getAmenities() != null && !store.getAmenities().isEmpty()) {
+            HBox amenitiesBox = new HBox(8);
+            for (String amenity : store.getAmenities()) {
+                Label chip = new Label(amenity);
+                chip.setStyle("-fx-background-color: #e8f5e9; -fx-text-fill: #1E3932; " +
+                        "-fx-background-radius: 12; -fx-padding: 4 10; -fx-font-size: 11;");
+                amenitiesBox.getChildren().add(chip);
+            }
+            infoCard.getChildren().addAll(nameLabel, hoursLabel, amenitiesBox);
+        } else {
+            infoCard.getChildren().addAll(nameLabel, hoursLabel);
+        }
+
+        Button directionsBtn = new Button("Get Directions");
+        directionsBtn.setStyle("-fx-background-color: #1E3932; -fx-text-fill: white; " +
+                "-fx-background-radius: 20; -fx-padding: 10 24; -fx-font-size: 13; -fx-cursor: hand;");
+        directionsBtn.setOnAction(e -> {
+            String url = "https://www.google.com/maps/search/?api=1&query=" +
+                    store.getAddress().replace(" ", "+");
+            try {
+                java.awt.Desktop.getDesktop().browse(new java.net.URI(url));
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        });
+
+        infoCard.getChildren().add(directionsBtn);
+        mapArea.getChildren().add(infoCard);
     }
 
     @FXML
