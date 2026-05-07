@@ -11,6 +11,7 @@ public class MenuItem {
     private String priceRange;
     private String caloriesRange;
     private String available;
+    private String imageUrl;
 
     public MenuItem(String itemId, String name, double price, String category) {
         this.itemId = itemId;
