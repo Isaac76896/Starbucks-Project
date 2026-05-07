@@ -91,6 +91,7 @@ public class MenuItem {
     public String getPriceRange() { return priceRange; }
     public String getCaloriesRange() { return caloriesRange; }
     public String getAvailable() { return available; }
+    public String getImageUrl() { return imageUrl; }
 
     @Override
     public String toString() {
