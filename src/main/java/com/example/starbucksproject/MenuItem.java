@@ -79,6 +79,7 @@ public class MenuItem {
     public void setPriceRange(String priceRange) { this.priceRange = priceRange; }
     public void setCaloriesRange(String caloriesRange) { this.caloriesRange = caloriesRange; }
     public void setAvailable(String available) { this.available = available; }
+    public void setImageUrl(String imageUrl) { this.imageUrl = imageUrl; }
 
     public String getId() { return itemId; }
     public String getName() { return name; }
