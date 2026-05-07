@@ -60,6 +60,7 @@ public class MenuController extends BaseController {
                         fields[3].trim(), fields[4].trim(), fields[5].trim(),
                         fields[6].trim(), fields[7].trim(), fields[8].trim()
                 );
+                if (fields.length > 9) item.setImageUrl(fields[9].trim());
                 menuItems.add(item);
                 String cat = fields[1].trim();
                 if (!categories.contains(cat)) categories.add(cat);
