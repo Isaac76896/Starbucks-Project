@@ -271,7 +271,7 @@ public class MenuController extends BaseController {
         addToOrderBtn.setOnAction(e -> addToCart(item));
 
         textArea.getChildren().addAll(nameLabel, priceLabel, addToOrderBtn);
-        card.getChildren().addAll(imagePlaceholder, textArea);
+        card.getChildren().addAll(imageContainer, textArea);
         return card;
     }
 
