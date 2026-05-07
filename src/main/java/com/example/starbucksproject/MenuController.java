@@ -231,11 +231,17 @@ public class MenuController extends BaseController {
                 "-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 6, 0, 0, 2);");
         card.setPadding(new Insets(0));
 
-        Region imagePlaceholder = new Region();
-        imagePlaceholder.setPrefHeight(120);
-        imagePlaceholder.setMinHeight(120);
-        imagePlaceholder.setMaxWidth(Double.MAX_VALUE);
-        imagePlaceholder.setStyle("-fx-background-color: #1E3932; -fx-background-radius: 12 12 0 0;");
+        // IMAGE
+        ImageView imageView = new ImageView();
+        imageView.setFitWidth(210);
+        imageView.setFitHeight(120);
+        imageView.setPreserveRatio(false);
+
+        String imageUrl = item.getImageUrl();
+        if (imageUrl != null && !imageUrl.isEmpty()) {
+            Image img = new Image(imageUrl, true); // true = background loading
+            imageView.setImage(img);
+        }
 
         VBox textArea = new VBox(4);
         textArea.setPadding(new Insets(8, 12, 10, 12));
