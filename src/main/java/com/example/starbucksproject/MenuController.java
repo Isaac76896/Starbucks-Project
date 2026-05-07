@@ -243,6 +243,12 @@ public class MenuController extends BaseController {
             imageView.setImage(img);
         }
 
+        StackPane imageContainer = new StackPane(imageView);
+        imageContainer.setStyle("-fx-background-color: #1E3932; -fx-background-radius: 12 12 0 0;");
+        imageContainer.setPrefHeight(120);
+        imageContainer.setMinHeight(120);
+
+        // TEXT
         VBox textArea = new VBox(4);
         textArea.setPadding(new Insets(8, 12, 10, 12));
         textArea.setAlignment(Pos.CENTER_LEFT);
