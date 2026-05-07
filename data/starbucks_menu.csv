@@ -1,129 +1,129 @@
-item_id,category,subcategory,item_name,description,size_options,price_range_usd,calories_range,available
-1,Drinks,Hot Coffee,Brewed Coffee,Freshly brewed drip coffee,"Tall, Grande, Venti",3.45-4.45,5-10,Year-Round
-2,Drinks,Hot Coffee,Caffè Americano,Espresso shots topped with hot water,"Tall, Grande, Venti",3.65-4.65,15,Year-Round
-3,Drinks,Hot Coffee,Cappuccino,Espresso with steamed and foamed milk,"Tall, Grande, Venti",4.25-5.25,80-140,Year-Round
-4,Drinks,Hot Coffee,Caffè Latte,Espresso with steamed milk and light foam,"Tall, Grande, Venti",4.75-5.75,150-250,Year-Round
-5,Drinks,Hot Coffee,Caramel Macchiato,Vanilla syrup with steamed milk and espresso marked with caramel drizzle,"Tall, Grande, Venti",5.25-6.25,180-250,Year-Round
-6,Drinks,Hot Coffee,Flat White,Ristretto shots with steamed whole milk,"Tall, Grande",5.25-5.75,170-220,Year-Round
-7,Drinks,Hot Coffee,Espresso,Solo or doppio shots of espresso,"Solo, Doppio",3.25-3.75,10,Year-Round
-8,Drinks,Hot Coffee,Espresso Macchiato,Espresso marked with a dollop of foam,"Solo, Doppio",3.75-4.25,15-35,Year-Round
-9,Drinks,Hot Coffee,Caffè Mocha,Espresso with mocha sauce and steamed milk topped with whip,"Tall, Grande, Venti",5.25-6.25,290-440,Year-Round
-10,Drinks,Hot Coffee,White Chocolate Mocha,Espresso with white chocolate sauce and steamed milk,"Tall, Grande, Venti",5.25-6.45,340-470,Year-Round
-11,Drinks,Hot Coffee,Cinnamon Dolce Latte,Espresso with cinnamon dolce syrup and steamed milk,"Tall, Grande, Venti",5.45-6.45,260-380,Year-Round
-12,Drinks,Hot Coffee,Blonde Vanilla Latte,Blonde espresso with vanilla syrup and steamed milk,"Tall, Grande, Venti",4.75-5.75,150-250,Year-Round
-13,Drinks,Hot Coffee,Pistachio Latte,Espresso with pistachio sauce and steamed milk,"Tall, Grande, Venti",5.75-6.75,300-430,Seasonal
-14,Drinks,Hot Coffee,Caramel Protein Latte,Espresso with protein-boosted milk and caramel syrup (up to 29g protein),"Tall, Grande, Venti",6.25-7.25,250-370,Year-Round
-15,Drinks,Cold Coffee,Iced Caffè Americano,Espresso shots topped with cold water over ice,"Tall, Grande, Venti, Trenta",3.65-4.95,15,Year-Round
-16,Drinks,Cold Coffee,Iced Caffè Latte,Espresso with cold milk over ice,"Tall, Grande, Venti",4.75-5.95,130-200,Year-Round
-17,Drinks,Cold Coffee,Iced Caramel Macchiato,Vanilla syrup with milk espresso and caramel drizzle over ice,"Tall, Grande, Venti",5.25-6.45,180-250,Year-Round
-18,Drinks,Cold Coffee,Iced Flat White,Ristretto shots with cold whole milk over ice,"Tall, Grande",5.25-5.75,130-200,Year-Round
-19,Drinks,Cold Coffee,Iced Caffè Mocha,Espresso with mocha sauce and cold milk over ice topped with whip,"Tall, Grande, Venti",5.25-6.45,290-440,Year-Round
-20,Drinks,Cold Coffee,Iced White Chocolate Mocha,Espresso with white chocolate sauce and milk over ice,"Tall, Grande, Venti",5.25-6.45,330-490,Year-Round
-21,Drinks,Cold Coffee,Iced Blonde Vanilla Latte,Blonde espresso with vanilla syrup and milk over ice,"Tall, Grande, Venti",4.75-5.95,150-250,Year-Round
-22,Drinks,Cold Coffee,Cold Brew Coffee,Slow-steeped cold brew served over ice,"Tall, Grande, Venti, Trenta",4.25-5.45,5,Year-Round
-23,Drinks,Cold Coffee,Vanilla Sweet Cream Cold Brew,Cold brew topped with vanilla sweet cream,"Tall, Grande, Venti, Trenta",5.45-6.45,110-200,Year-Round
-24,Drinks,Cold Coffee,Salted Caramel Cream Cold Brew,Cold brew with salted caramel cream cold foam,"Tall, Grande, Venti, Trenta",5.45-6.45,230-380,Year-Round
-25,Drinks,Cold Coffee,Pistachio Cream Cold Brew,Cold brew with vanilla syrup and pistachio cream cold foam,"Tall, Grande, Venti, Trenta",5.75-6.75,280-420,Seasonal
-26,Drinks,Cold Coffee,Iced Caramel Protein Latte,Espresso with protein-boosted milk and caramel over ice (up to 27g protein),"Tall, Grande, Venti",6.25-7.25,230-350,Year-Round
-27,Drinks,Cold Coffee,Iced Caramel Protein Matcha,Matcha with protein-boosted milk and caramel over ice (up to 31g protein),"Tall, Grande, Venti",6.25-7.25,220-340,Year-Round
-28,Drinks,Cold Coffee,Iced Dubai Chocolate Mocha,Espresso with chocolate and pistachio-inspired flavors over ice,"Tall, Grande, Venti",6.25-7.25,300-430,Limited Time
-29,Drinks,Cold Coffee,Iced Dubai Chocolate Matcha,Matcha with chocolate and pistachio-inspired flavors over ice,"Tall, Grande, Venti",6.25-7.25,280-400,Limited Time
-30,Drinks,Frappuccino,Coffee Frappuccino,Coffee Frappuccino blended beverage with whip,"Tall, Grande, Venti",5.45-6.45,230-370,Year-Round
-31,Drinks,Frappuccino,Caramel Frappuccino,Caramel syrup blended with coffee milk and ice topped with whip and caramel drizzle,"Tall, Grande, Venti",5.75-6.75,300-490,Year-Round
-32,Drinks,Frappuccino,Mocha Frappuccino,Mocha sauce blended with coffee milk and ice topped with whip,"Tall, Grande, Venti",5.45-6.45,280-470,Year-Round
-33,Drinks,Frappuccino,Vanilla Bean Frappuccino,Vanilla bean powder blended with milk and ice topped with whip (no coffee),"Tall, Grande, Venti",5.25-6.25,280-430,Year-Round
-34,Drinks,Frappuccino,Matcha Cream Frappuccino,Matcha blended with milk and ice topped with whip (no coffee),"Tall, Grande, Venti",5.25-6.25,300-460,Year-Round
-35,Drinks,Frappuccino,Chai Cream Frappuccino,Chai blended with milk and ice topped with whip (no coffee),"Tall, Grande, Venti",5.25-6.25,270-420,Year-Round
-36,Drinks,Frappuccino,Caramel Ribbon Crunch Frappuccino,Dark caramel sauce blended with coffee topped with whip caramel drizzle and caramel sugar sprinkle,"Tall, Grande, Venti",5.95-6.95,380-590,Year-Round
-37,Drinks,Hot Tea,Chai Tea Latte,Black tea infused with cinnamon clove and spices with steamed milk,"Tall, Grande, Venti",5.25-6.25,190-290,Year-Round
-38,Drinks,Hot Tea,Royal English Breakfast Tea Latte,English breakfast tea with steamed milk,"Tall, Grande, Venti",4.75-5.75,170-260,Year-Round
-39,Drinks,Hot Tea,Matcha Tea Latte,Matcha green tea blended with steamed milk,"Tall, Grande, Venti",5.25-6.25,200-300,Year-Round
-40,Drinks,Hot Tea,Emperor's Clouds & Mist Green Tea,Brewed hot green tea,"Tall, Grande, Venti",3.25-4.25,0,Year-Round
-41,Drinks,Hot Tea,Mint Majesty Herbal Tea,Brewed spearmint and peppermint herbal tea,"Tall, Grande, Venti",3.25-4.25,0,Year-Round
-42,Drinks,Hot Tea,Peach Tranquility Herbal Tea,Brewed peach and chamomile herbal tea,"Tall, Grande, Venti",3.25-4.25,0,Year-Round
-43,Drinks,Hot Tea,London Fog Tea Latte,Earl Grey tea infused with vanilla syrup and steamed milk,"Tall, Grande, Venti",5.25-6.25,180-270,Year-Round
-44,Drinks,Iced Tea,Iced Chai Tea Latte,Chai concentrate with ice and milk,"Tall, Grande, Venti, Trenta",5.25-6.45,180-290,Year-Round
-45,Drinks,Iced Tea,Iced Matcha Tea Latte,Matcha with ice and milk,"Tall, Grande, Venti",5.25-6.25,200-300,Year-Round
-46,Drinks,Iced Tea,Iced Black Tea,Freshly brewed black tea shaken with ice,"Tall, Grande, Venti, Trenta",3.25-4.45,0-30,Year-Round
-47,Drinks,Iced Tea,Iced Black Tea Lemonade,Black tea shaken with lemonade and ice,"Tall, Grande, Venti, Trenta",3.75-4.95,60-120,Year-Round
-48,Drinks,Iced Tea,Iced Green Tea,Freshly brewed green tea shaken with ice,"Tall, Grande, Venti, Trenta",3.25-4.45,0-30,Year-Round
-49,Drinks,Iced Tea,Iced Green Tea Lemonade,Green tea shaken with lemonade and ice,"Tall, Grande, Venti, Trenta",3.75-4.95,60-120,Year-Round
-50,Drinks,Iced Tea,Iced Passion Tango Tea,Herbal passion tea shaken with ice,"Tall, Grande, Venti, Trenta",3.25-4.45,0-30,Year-Round
-51,Drinks,Iced Tea,Iced Passion Tango Tea Lemonade,Herbal passion tea shaken with lemonade and ice,"Tall, Grande, Venti, Trenta",3.75-4.95,60-120,Year-Round
-52,Drinks,Iced Tea,Iced London Fog Tea Latte,Earl Grey tea with vanilla syrup and cold milk over ice,"Tall, Grande, Venti",5.25-6.25,180-270,Year-Round
-53,Drinks,Iced Tea,Iced Lavender Cream Matcha,Matcha with lavender and cream over ice,"Tall, Grande, Venti",5.75-6.75,250-370,Seasonal
-54,Drinks,Iced Tea,Iced Banana Bread Matcha,Matcha with banana bread flavoring over ice,"Tall, Grande, Venti",5.75-6.75,240-360,Seasonal
-55,Drinks,Iced Tea,Iced Double Berry Matcha,Matcha with double berry flavoring over ice,"Tall, Grande, Venti",5.75-6.75,230-350,Seasonal
-56,Drinks,Refreshers,Strawberry Açaí Refresher,Sweet strawberry flavors and açaí notes with ice,"Tall, Grande, Venti, Trenta",4.25-5.45,90-140,Year-Round
-57,Drinks,Refreshers,Mango Dragonfruit Refresher,Mango and dragonfruit flavors with ice,"Tall, Grande, Venti, Trenta",4.25-5.45,90-130,Year-Round
-58,Drinks,Refreshers,Strawberry Açaí Lemonade Refresher,Strawberry açaí refresher with lemonade,"Tall, Grande, Venti, Trenta",4.75-5.95,130-200,Year-Round
-59,Drinks,Refreshers,Mango Dragonfruit Lemonade Refresher,Mango dragonfruit refresher with lemonade,"Tall, Grande, Venti, Trenta",4.75-5.95,130-200,Year-Round
-60,Drinks,Refreshers,Toasted Coconut Cream Cold Brew,Cold brew with toasted coconut syrup and cream cold foam,"Tall, Grande, Venti, Trenta",5.75-6.75,280-420,Seasonal
-61,Drinks,Refreshers,Iced Ube Coconut Macchiato,Ube and coconut layered iced macchiato,"Tall, Grande, Venti",6.25-7.25,260-390,Limited Time
-62,Drinks,Hot Chocolate & Other,Hot Chocolate,Mocha sauce and vanilla syrup with steamed milk and whip,"Tall, Grande, Venti",4.45-5.45,320-490,Year-Round
-63,Drinks,Hot Chocolate & Other,White Hot Chocolate,White chocolate sauce with steamed milk and whip,"Tall, Grande, Venti",4.75-5.75,360-530,Year-Round
-64,Drinks,Hot Chocolate & Other,Steamed Apple Juice,Freshly steamed apple juice,"Tall, Grande, Venti",3.25-4.25,120-230,Year-Round
-65,Drinks,Hot Chocolate & Other,Steamed Milk,Steamed 2% milk or milk alternative,"Tall, Grande, Venti",2.75-3.75,130-200,Year-Round
-66,Drinks,Bottled & Packaged,Evolution Fresh Orange Juice,Freshly bottled orange juice,One Size,4.45,160,Year-Round
-67,Drinks,Bottled & Packaged,Ethos Water,Bottled spring water,One Size,2.25,0,Year-Round
-68,Drinks,Bottled & Packaged,Sparkling Water,Bottled sparkling water,One Size,2.25,0,Year-Round
-69,Food,Breakfast,Bacon Gouda & Egg Sandwich,Applewood-smoked bacon with aged gouda and egg on artisan roll,One Size,5.45,500,Year-Round
-70,Food,Breakfast,Sausage Cheddar & Egg Sandwich,Sausage with aged cheddar and egg on English muffin,One Size,5.25,500,Year-Round
-71,Food,Breakfast,Turkey Bacon Cheddar & Egg White Sandwich,Turkey bacon with egg whites and white cheddar on multigrain English muffin,One Size,5.75,230,Year-Round
-72,Food,Breakfast,Ham & Swiss Croissant,Ham and swiss on a warm buttery croissant,One Size,5.75,330,Year-Round
-73,Food,Breakfast,Spinach Feta & Egg White Wrap,Cage-free egg whites with spinach feta and sun-dried tomato in a whole wheat wrap,One Size,5.75,290,Year-Round
-74,Food,Breakfast,Double-Smoked Bacon Cheddar & Egg Sandwich,Double-smoked bacon with aged cheddar and egg on ciabatta,One Size,5.95,500,Year-Round
-75,Food,Breakfast,Egg Bites - Bacon & Gruyère,Cage-free eggs bacon and gruyère cooked sous vide,One Size,6.45,300,Year-Round
-76,Food,Breakfast,Egg Bites - Egg White & Roasted Red Pepper,Cage-free egg whites with cottage cheese and roasted red pepper cooked sous vide,One Size,6.45,170,Year-Round
-77,Food,Breakfast,Egg Bites - Truffle Mushroom & Brie,Cage-free eggs with black truffles brie and mushrooms cooked sous vide,One Size,6.75,290,Limited Time
-78,Food,Breakfast,Hearty Blueberry Oatmeal,Hearty steel-cut oatmeal with blueberry compote and nut medley,One Size,4.75,220,Year-Round
-79,Food,Bakery,Butter Croissant,Classic flaky butter croissant,One Size,4.25,260,Year-Round
-80,Food,Bakery,Chocolate Croissant,Butter croissant filled with dark chocolate,One Size,5.45,340,Year-Round
-81,Food,Bakery,Blueberry Muffin,Muffin with blueberries and lemon glaze,One Size,3.75,380,Year-Round
-82,Food,Bakery,Banana Nut Bread,Moist banana nut loaf,One Size,3.75,420,Year-Round
-83,Food,Bakery,Iced Lemon Pound Cake,Lemon pound cake with lemon icing,One Size,4.25,470,Year-Round
-84,Food,Bakery,Pumpkin Loaf,Pumpkin loaf topped with pumpkin seeds,One Size,4.25,390,Seasonal
-85,Food,Bakery,Petite Vanilla Bean Scone,Bite-sized vanilla scone with vanilla glaze,One Size,2.25,140,Year-Round
-86,Food,Bakery,Classic Coffee Cake,Cinnamon sugar coffee cake with streusel topping,One Size,4.25,370,Year-Round
-87,Food,Bakery,Chocolate Chip Cookie,Classic chocolate chip cookie,One Size,2.75,370,Year-Round
-88,Food,Bakery,Yuzu Citrus Croissant,Croissant dough filled with yuzu citrus cream and candied yuzu,One Size,5.75,380,Seasonal
-89,Food,Bakery,Berry Blondie,White chocolate blondie with raspberry and blueberry jam swirls,One Size,4.75,360,Seasonal
-90,Food,Cake Pops,Birthday Cake Pop,Vanilla cake with pink icing,One Size,3.25,160,Year-Round
-91,Food,Cake Pops,Chocolate Cake Pop,Chocolate cake with chocolate icing,One Size,3.25,170,Year-Round
-92,Food,Cake Pops,Cookies & Cream Cake Pop,Cookies and cream cake with white chocolate coating,One Size,3.25,160,Year-Round
-93,Food,Cake Pops,Valentine Cake Pop,Seasonal heart-shaped cake pop,One Size,3.25,160,Seasonal
-94,Food,Lunch,Chicken & Quinoa Protein Bowl,Chicken with quinoa black beans and greens with lemon tahini dressing,One Size,10.45,420,Year-Round
-95,Food,Lunch,Tomato & Mozzarella Sandwich,Fresh mozzarella with tomatoes and basil on ciabatta,One Size,9.45,380,Year-Round
-96,Food,Lunch,Cheese & Fruit Protein Box,Cheese with fruit nuts and crackers,One Size,7.95,470,Year-Round
-97,Food,Lunch,Eggs & Cheese Protein Box,Hard-boiled eggs with white cheddar and multigrain crackers,One Size,7.95,470,Year-Round
-98,Food,Snacks & Treats,Kind Bar (various flavors),Whole nut and grain bar,One Size,2.75,200,Year-Round
-99,Food,Snacks & Treats,Khloud Protein Popcorn,Sweet and salty kettle corn with 7g protein per bag,One Size,3.95,130,Year-Round
-100,Food,Snacks & Treats,Ellenos Greek Yogurt - No Added Sugar Muesli,Unsweetened yogurt with no-sugar-added muesli topper,One Size,5.45,220,Year-Round
-101,Food,Snacks & Treats,Hippeas Chickpea Puffs,Chickpea snack puffs,One Size,2.75,130,Year-Round
-102,Food,Snacks & Treats,Justin's Almond Butter Packets,Single-serve almond butter,One Size,1.95,190,Year-Round
-103,At-Home Coffee,Whole Bean,Veranda Blend,Lightest blonde roast with mellow and soft notes — Latin America origin,12oz / 1lb bag,13.95-17.95,0,Year-Round
-104,At-Home Coffee,Whole Bean,Breakfast Blend,Light roast with a bright and citrusy flavor — Latin America origin,12oz / 1lb bag,13.95-17.95,0,Year-Round
-105,At-Home Coffee,Whole Bean,Pike Place Roast,Smooth and balanced medium roast — the original Starbucks blend since 1971,12oz / 1lb bag,13.95-17.95,0,Year-Round
-106,At-Home Coffee,Whole Bean,House Blend,Classic balanced medium roast with bright flavor and round smoothness — Latin America origin,12oz / 1lb bag,13.95-17.95,0,Year-Round
-107,At-Home Coffee,Whole Bean,Caffè Verona,Dark roast with notes of dark cocoa and caramelly sweetness — named after Verona Italy,12oz / 1lb bag,13.95-17.95,0,Year-Round
-108,At-Home Coffee,Whole Bean,Sumatra,Full-bodied dark roast with earthy and herbal notes — single origin Sumatra,12oz / 1lb bag,13.95-17.95,0,Year-Round
-109,At-Home Coffee,Whole Bean,Guatemala Antigua,Medium roast with notes of cocoa and brown sugar — single origin Guatemala,12oz / 1lb bag,13.95-17.95,0,Year-Round
-110,At-Home Coffee,Whole Bean,Colombia,Medium roast with rich and caramelly notes — single origin Colombia,12oz / 1lb bag,13.95-17.95,0,Year-Round
-111,At-Home Coffee,Whole Bean,Ethiopia,Medium roast with bright berry and citrus notes — single origin Ethiopia,12oz / 1lb bag,13.95-17.95,0,Year-Round
-112,At-Home Coffee,Whole Bean,Kenya,Bold medium roast with blackcurrant and grapefruit notes — single origin Kenya,12oz / 1lb bag,13.95-17.95,0,Year-Round
-113,At-Home Coffee,Whole Bean,Espresso Roast,Dark roast crafted for espresso with caramelly sweetness — signature espresso blend,12oz / 1lb bag,13.95-17.95,0,Year-Round
-114,At-Home Coffee,Whole Bean,Italian Roast,Extra dark roast with intense smoky and caramel notes,12oz / 1lb bag,13.95-17.95,0,Year-Round
-115,At-Home Coffee,Whole Bean,French Roast,Dark roast with intense smoky flavor — one of Starbucks darkest roasts,12oz / 1lb bag,13.95-17.95,0,Year-Round
-116,At-Home Coffee,Whole Bean,Decaf Pike Place Roast,Decaffeinated medium roast version of the classic Pike Place blend,12oz / 1lb bag,13.95-17.95,0,Year-Round
-117,At-Home Coffee,Whole Bean,Decaf Sumatra,Decaffeinated full-bodied dark roast with earthy herbal notes,12oz / 1lb bag,13.95-17.95,0,Year-Round
-118,At-Home Coffee,Whole Bean,Starbucks 1971 Roast,New dark roast inspired by Pike Place heritage — complex and smoky with rich body,12oz / 1lb bag,14.95-18.95,0,Year-Round
-119,At-Home Coffee,Whole Bean,Sun-Dried Ethiopia Highlands,Single-origin medium roast with notes of blackberry jam and wild mint — Sidama region,12oz / 1lb bag,15.95-19.95,0,Seasonal
-120,At-Home Coffee,Whole Bean,Holiday Blend,Medium-dark roast with spiced notes — seasonal holiday offering,12oz / 1lb bag,13.95-17.95,0,Seasonal
-121,At-Home Coffee,VIA Instant,VIA Instant Pike Place Roast,Microground medium roast instant coffee with notes of cocoa and toasted nuts — 100% arabica,Box of 8 / 26 / 50 packets,8.95-29.95,0,Year-Round
-122,At-Home Coffee,VIA Instant,VIA Instant Italian Roast,Microground dark roast instant coffee with bold caramelly sweetness — 100% arabica,Box of 8 / 26 / 50 packets,8.95-29.95,0,Year-Round
-123,At-Home Coffee,VIA Instant,VIA Instant French Roast,Microground extra-dark roast instant coffee — smooth rich and velvety — 100% arabica,Box of 8 / 26 / 50 packets,8.95-29.95,0,Year-Round
-124,At-Home Coffee,VIA Instant,VIA Instant Colombia,Microground single-origin medium roast with notes of walnut and fresh herbs — 100% arabica,Box of 8 / 26 / 50 packets,8.95-29.95,0,Year-Round
-125,At-Home Coffee,VIA Instant,VIA Instant Veranda Blend,Microground blonde roast instant coffee — light bright and slightly fruity — 100% arabica,Box of 8 / 26 / 50 packets,8.95-29.95,0,Year-Round
-126,At-Home Coffee,VIA Instant,VIA Instant Decaf Italian Roast,Decaffeinated microground dark roast instant coffee — approx. 3mg caffeine per packet,Box of 8 / 26 / 50 packets,8.95-29.95,0,Year-Round
-127,At-Home Coffee,VIA Instant,VIA Instant Iced Coffee (Sweetened),Lightly sweetened microground instant iced coffee — serve over ice,Box of 6 packets,7.95-12.95,80,Year-Round
-128,At-Home Coffee,VIA Instant,VIA Instant Caramel Latte,Microground instant latte with caramel flavor — just add water or milk,Box of 6 packets,7.95-12.95,110,Year-Round
+item_id,category,subcategory,item_name,description,size_options,price_range_usd,calories_range,available,image_url
+1,Drinks,Hot Coffee,Brewed Coffee,Freshly brewed drip coffee,"Tall, Grande, Venti",3.45-4.45,5-10,Year-Round,https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400
+2,Drinks,Hot Coffee,Caffè Americano,Espresso shots topped with hot water,"Tall, Grande, Venti",3.65-4.65,15,Year-Round,https://images.unsplash.com/photo-1534778101976-62847782c213?w=400
+3,Drinks,Hot Coffee,Cappuccino,Espresso with steamed and foamed milk,"Tall, Grande, Venti",4.25-5.25,80-140,Year-Round,https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=400
+4,Drinks,Hot Coffee,Caffè Latte,Espresso with steamed milk and light foam,"Tall, Grande, Venti",4.75-5.75,150-250,Year-Round,https://images.unsplash.com/photo-1541167760496-1628856ab772?w=400
+5,Drinks,Hot Coffee,Caramel Macchiato,Vanilla syrup with steamed milk and espresso marked with caramel drizzle,"Tall, Grande, Venti",5.25-6.25,180-250,Year-Round,https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?w=400
+6,Drinks,Hot Coffee,Flat White,Ristretto shots with steamed whole milk,"Tall, Grande",5.25-5.75,170-220,Year-Round,https://images.unsplash.com/photo-1577968897966-3d4325b36b61?w=400
+7,Drinks,Hot Coffee,Espresso,Solo or doppio shots of espresso,"Solo, Doppio",3.25-3.75,10,Year-Round,https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?w=400
+8,Drinks,Hot Coffee,Espresso Macchiato,Espresso marked with a dollop of foam,"Solo, Doppio",3.75-4.25,15-35,Year-Round,https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=400
+9,Drinks,Hot Coffee,Caffè Mocha,Espresso with mocha sauce and steamed milk topped with whip,"Tall, Grande, Venti",5.25-6.25,290-440,Year-Round,https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?w=400
+10,Drinks,Hot Coffee,White Chocolate Mocha,Espresso with white chocolate sauce and steamed milk,"Tall, Grande, Venti",5.25-6.45,340-470,Year-Round,https://images.unsplash.com/photo-1551030173-122aabc4489c?w=400
+11,Drinks,Hot Coffee,Cinnamon Dolce Latte,Espresso with cinnamon dolce syrup and steamed milk,"Tall, Grande, Venti",5.45-6.45,260-380,Year-Round,https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400
+12,Drinks,Hot Coffee,Blonde Vanilla Latte,Blonde espresso with vanilla syrup and steamed milk,"Tall, Grande, Venti",4.75-5.75,150-250,Year-Round,https://images.unsplash.com/photo-1541167760496-1628856ab772?w=400
+13,Drinks,Hot Coffee,Pistachio Latte,Espresso with pistachio sauce and steamed milk,"Tall, Grande, Venti",5.75-6.75,300-430,Seasonal,https://images.unsplash.com/photo-1541167760496-1628856ab772?w=400
+14,Drinks,Hot Coffee,Caramel Protein Latte,Espresso with protein-boosted milk and caramel syrup,"Tall, Grande, Venti",6.25-7.25,250-370,Year-Round,https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?w=400
+15,Drinks,Cold Coffee,Iced Caffè Americano,Espresso shots topped with cold water over ice,"Tall, Grande, Venti, Trenta",3.65-4.95,15,Year-Round,https://images.unsplash.com/photo-1517959105821-eaf2591984ca?w=400
+16,Drinks,Cold Coffee,Iced Caffè Latte,Espresso with cold milk over ice,"Tall, Grande, Venti",4.75-5.95,130-200,Year-Round,https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400
+17,Drinks,Cold Coffee,Iced Caramel Macchiato,Vanilla syrup with milk espresso and caramel drizzle over ice,"Tall, Grande, Venti",5.25-6.45,180-250,Year-Round,https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400
+18,Drinks,Cold Coffee,Iced Flat White,Ristretto shots with cold whole milk over ice,"Tall, Grande",5.25-5.75,130-200,Year-Round,https://images.unsplash.com/photo-1517959105821-eaf2591984ca?w=400
+19,Drinks,Cold Coffee,Iced Caffè Mocha,Espresso with mocha sauce and cold milk over ice topped with whip,"Tall, Grande, Venti",5.25-6.45,290-440,Year-Round,https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?w=400
+20,Drinks,Cold Coffee,Iced White Chocolate Mocha,Espresso with white chocolate sauce and milk over ice,"Tall, Grande, Venti",5.25-6.45,330-490,Year-Round,https://images.unsplash.com/photo-1551030173-122aabc4489c?w=400
+21,Drinks,Cold Coffee,Iced Blonde Vanilla Latte,Blonde espresso with vanilla syrup and milk over ice,"Tall, Grande, Venti",4.75-5.95,150-250,Year-Round,https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400
+22,Drinks,Cold Coffee,Cold Brew Coffee,Slow-steeped cold brew served over ice,"Tall, Grande, Venti, Trenta",4.25-5.45,5,Year-Round,https://images.unsplash.com/photo-1517959105821-eaf2591984ca?w=400
+23,Drinks,Cold Coffee,Vanilla Sweet Cream Cold Brew,Cold brew topped with vanilla sweet cream,"Tall, Grande, Venti, Trenta",5.45-6.45,110-200,Year-Round,https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400
+24,Drinks,Cold Coffee,Salted Caramel Cream Cold Brew,Cold brew with salted caramel cream cold foam,"Tall, Grande, Venti, Trenta",5.45-6.45,230-380,Year-Round,https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400
+25,Drinks,Cold Coffee,Pistachio Cream Cold Brew,Cold brew with vanilla syrup and pistachio cream cold foam,"Tall, Grande, Venti, Trenta",5.75-6.75,280-420,Seasonal,https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400
+26,Drinks,Cold Coffee,Iced Caramel Protein Latte,Espresso with protein-boosted milk and caramel over ice,"Tall, Grande, Venti",6.25-7.25,230-350,Year-Round,https://images.unsplash.com/photo-1517959105821-eaf2591984ca?w=400
+27,Drinks,Cold Coffee,Iced Caramel Protein Matcha,Matcha with protein-boosted milk and caramel over ice,"Tall, Grande, Venti",6.25-7.25,220-340,Year-Round,https://images.unsplash.com/photo-1515823064-d6e0c04616a7?w=400
+28,Drinks,Cold Coffee,Iced Dubai Chocolate Mocha,Espresso with chocolate and pistachio-inspired flavors over ice,"Tall, Grande, Venti",6.25-7.25,300-430,Limited Time,https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?w=400
+29,Drinks,Cold Coffee,Iced Dubai Chocolate Matcha,Matcha with chocolate and pistachio-inspired flavors over ice,"Tall, Grande, Venti",6.25-7.25,280-400,Limited Time,https://images.unsplash.com/photo-1515823064-d6e0c04616a7?w=400
+30,Drinks,Frappuccino,Coffee Frappuccino,Coffee Frappuccino blended beverage with whip,"Tall, Grande, Venti",5.45-6.45,230-370,Year-Round,https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=400
+31,Drinks,Frappuccino,Caramel Frappuccino,Caramel syrup blended with coffee milk and ice topped with whip,"Tall, Grande, Venti",5.75-6.75,300-490,Year-Round,https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=400
+32,Drinks,Frappuccino,Mocha Frappuccino,Mocha sauce blended with coffee milk and ice topped with whip,"Tall, Grande, Venti",5.45-6.45,280-470,Year-Round,https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=400
+33,Drinks,Frappuccino,Vanilla Bean Frappuccino,Vanilla bean powder blended with milk and ice topped with whip,"Tall, Grande, Venti",5.25-6.25,280-430,Year-Round,https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=400
+34,Drinks,Frappuccino,Matcha Cream Frappuccino,Matcha blended with milk and ice topped with whip,"Tall, Grande, Venti",5.25-6.25,300-460,Year-Round,https://images.unsplash.com/photo-1515823064-d6e0c04616a7?w=400
+35,Drinks,Frappuccino,Chai Cream Frappuccino,Chai blended with milk and ice topped with whip,"Tall, Grande, Venti",5.25-6.25,270-420,Year-Round,https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=400
+36,Drinks,Frappuccino,Caramel Ribbon Crunch Frappuccino,Dark caramel sauce blended with coffee topped with whip,"Tall, Grande, Venti",5.95-6.95,380-590,Year-Round,https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=400
+37,Drinks,Hot Tea,Chai Tea Latte,Black tea infused with cinnamon clove and spices with steamed milk,"Tall, Grande, Venti",5.25-6.25,190-290,Year-Round,https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400
+38,Drinks,Hot Tea,Royal English Breakfast Tea Latte,English breakfast tea with steamed milk,"Tall, Grande, Venti",4.75-5.75,170-260,Year-Round,https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=400
+39,Drinks,Hot Tea,Matcha Tea Latte,Matcha green tea blended with steamed milk,"Tall, Grande, Venti",5.25-6.25,200-300,Year-Round,https://images.unsplash.com/photo-1515823064-d6e0c04616a7?w=400
+40,Drinks,Hot Tea,Emperor's Clouds & Mist Green Tea,Brewed hot green tea,"Tall, Grande, Venti",3.25-4.25,0,Year-Round,https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=400
+41,Drinks,Hot Tea,Mint Majesty Herbal Tea,Brewed spearmint and peppermint herbal tea,"Tall, Grande, Venti",3.25-4.25,0,Year-Round,https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400
+42,Drinks,Hot Tea,Peach Tranquility Herbal Tea,Brewed peach and chamomile herbal tea,"Tall, Grande, Venti",3.25-4.25,0,Year-Round,https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=400
+43,Drinks,Hot Tea,London Fog Tea Latte,Earl Grey tea infused with vanilla syrup and steamed milk,"Tall, Grande, Venti",5.25-6.25,180-270,Year-Round,https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400
+44,Drinks,Iced Tea,Iced Chai Tea Latte,Chai concentrate with ice and milk,"Tall, Grande, Venti, Trenta",5.25-6.45,180-290,Year-Round,https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400
+45,Drinks,Iced Tea,Iced Matcha Tea Latte,Matcha with ice and milk,"Tall, Grande, Venti",5.25-6.25,200-300,Year-Round,https://images.unsplash.com/photo-1515823064-d6e0c04616a7?w=400
+46,Drinks,Iced Tea,Iced Black Tea,Freshly brewed black tea shaken with ice,"Tall, Grande, Venti, Trenta",3.25-4.45,0-30,Year-Round,https://images.unsplash.com/photo-1499638673689-79a0b5115d87?w=400
+47,Drinks,Iced Tea,Iced Black Tea Lemonade,Black tea shaken with lemonade and ice,"Tall, Grande, Venti, Trenta",3.75-4.95,60-120,Year-Round,https://images.unsplash.com/photo-1499638673689-79a0b5115d87?w=400
+48,Drinks,Iced Tea,Iced Green Tea,Freshly brewed green tea shaken with ice,"Tall, Grande, Venti, Trenta",3.25-4.45,0-30,Year-Round,https://images.unsplash.com/photo-1499638673689-79a0b5115d87?w=400
+49,Drinks,Iced Tea,Iced Green Tea Lemonade,Green tea shaken with lemonade and ice,"Tall, Grande, Venti, Trenta",3.75-4.95,60-120,Year-Round,https://images.unsplash.com/photo-1499638673689-79a0b5115d87?w=400
+50,Drinks,Iced Tea,Iced Passion Tango Tea,Herbal passion tea shaken with ice,"Tall, Grande, Venti, Trenta",3.25-4.45,0-30,Year-Round,https://images.unsplash.com/photo-1544145945-f90425340c7e?w=400
+51,Drinks,Iced Tea,Iced Passion Tango Tea Lemonade,Herbal passion tea shaken with lemonade and ice,"Tall, Grande, Venti, Trenta",3.75-4.95,60-120,Year-Round,https://images.unsplash.com/photo-1544145945-f90425340c7e?w=400
+52,Drinks,Iced Tea,Iced London Fog Tea Latte,Earl Grey tea with vanilla syrup and cold milk over ice,"Tall, Grande, Venti",5.25-6.25,180-270,Year-Round,https://images.unsplash.com/photo-1499638673689-79a0b5115d87?w=400
+53,Drinks,Iced Tea,Iced Lavender Cream Matcha,Matcha with lavender and cream over ice,"Tall, Grande, Venti",5.75-6.75,250-370,Seasonal,https://images.unsplash.com/photo-1515823064-d6e0c04616a7?w=400
+54,Drinks,Iced Tea,Iced Banana Bread Matcha,Matcha with banana bread flavoring over ice,"Tall, Grande, Venti",5.75-6.75,240-360,Seasonal,https://images.unsplash.com/photo-1515823064-d6e0c04616a7?w=400
+55,Drinks,Iced Tea,Iced Double Berry Matcha,Matcha with double berry flavoring over ice,"Tall, Grande, Venti",5.75-6.75,230-350,Seasonal,https://images.unsplash.com/photo-1515823064-d6e0c04616a7?w=400
+56,Drinks,Refreshers,Strawberry Açaí Refresher,Sweet strawberry flavors and açaí notes with ice,"Tall, Grande, Venti, Trenta",4.25-5.45,90-140,Year-Round,https://images.unsplash.com/photo-1544145945-f90425340c7e?w=400
+57,Drinks,Refreshers,Mango Dragonfruit Refresher,Mango and dragonfruit flavors with ice,"Tall, Grande, Venti, Trenta",4.25-5.45,90-130,Year-Round,https://images.unsplash.com/photo-1544145945-f90425340c7e?w=400
+58,Drinks,Refreshers,Strawberry Açaí Lemonade Refresher,Strawberry açaí refresher with lemonade,"Tall, Grande, Venti, Trenta",4.75-5.95,130-200,Year-Round,https://images.unsplash.com/photo-1544145945-f90425340c7e?w=400
+59,Drinks,Refreshers,Mango Dragonfruit Lemonade Refresher,Mango dragonfruit refresher with lemonade,"Tall, Grande, Venti, Trenta",4.75-5.95,130-200,Year-Round,https://images.unsplash.com/photo-1544145945-f90425340c7e?w=400
+60,Drinks,Refreshers,Toasted Coconut Cream Cold Brew,Cold brew with toasted coconut syrup and cream cold foam,"Tall, Grande, Venti, Trenta",5.75-6.75,280-420,Seasonal,https://images.unsplash.com/photo-1517959105821-eaf2591984ca?w=400
+61,Drinks,Refreshers,Iced Ube Coconut Macchiato,Ube and coconut layered iced macchiato,"Tall, Grande, Venti",6.25-7.25,260-390,Limited Time,https://images.unsplash.com/photo-1544145945-f90425340c7e?w=400
+62,Drinks,Hot Chocolate & Other,Hot Chocolate,Mocha sauce and vanilla syrup with steamed milk and whip,"Tall, Grande, Venti",4.45-5.45,320-490,Year-Round,https://images.unsplash.com/photo-1542990253-a781e9cf7d2f?w=400
+63,Drinks,Hot Chocolate & Other,White Hot Chocolate,White chocolate sauce with steamed milk and whip,"Tall, Grande, Venti",4.75-5.75,360-530,Year-Round,https://images.unsplash.com/photo-1551030173-122aabc4489c?w=400
+64,Drinks,Hot Chocolate & Other,Steamed Apple Juice,Freshly steamed apple juice,"Tall, Grande, Venti",3.25-4.25,120-230,Year-Round,https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=400
+65,Drinks,Hot Chocolate & Other,Steamed Milk,Steamed 2% milk or milk alternative,"Tall, Grande, Venti",2.75-3.75,130-200,Year-Round,https://images.unsplash.com/photo-1561043433-aaf687c4cf04?w=400
+66,Drinks,Bottled & Packaged,Evolution Fresh Orange Juice,Freshly bottled orange juice,One Size,4.45,160,Year-Round,https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=400
+67,Drinks,Bottled & Packaged,Ethos Water,Bottled spring water,One Size,2.25,0,Year-Round,https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=400
+68,Drinks,Bottled & Packaged,Sparkling Water,Bottled sparkling water,One Size,2.25,0,Year-Round,https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=400
+69,Food,Breakfast,Bacon Gouda & Egg Sandwich,Applewood-smoked bacon with aged gouda and egg on artisan roll,One Size,5.45,500,Year-Round,https://images.unsplash.com/photo-1550507992-eb63ffee0847?w=400
+70,Food,Breakfast,Sausage Cheddar & Egg Sandwich,Sausage with aged cheddar and egg on English muffin,One Size,5.25,500,Year-Round,https://images.unsplash.com/photo-1550507992-eb63ffee0847?w=400
+71,Food,Breakfast,Turkey Bacon Cheddar & Egg White Sandwich,Turkey bacon with egg whites and white cheddar on multigrain English muffin,One Size,5.75,230,Year-Round,https://images.unsplash.com/photo-1550507992-eb63ffee0847?w=400
+72,Food,Breakfast,Ham & Swiss Croissant,Ham and swiss on a warm buttery croissant,One Size,5.75,330,Year-Round,https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=400
+73,Food,Breakfast,Spinach Feta & Egg White Wrap,Cage-free egg whites with spinach feta and sun-dried tomato in a whole wheat wrap,One Size,5.75,290,Year-Round,https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=400
+74,Food,Breakfast,Double-Smoked Bacon Cheddar & Egg Sandwich,Double-smoked bacon with aged cheddar and egg on ciabatta,One Size,5.95,500,Year-Round,https://images.unsplash.com/photo-1550507992-eb63ffee0847?w=400
+75,Food,Breakfast,Egg Bites - Bacon & Gruyère,Cage-free eggs bacon and gruyère cooked sous vide,One Size,6.45,300,Year-Round,https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=400
+76,Food,Breakfast,Egg Bites - Egg White & Roasted Red Pepper,Cage-free egg whites with cottage cheese and roasted red pepper cooked sous vide,One Size,6.45,170,Year-Round,https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=400
+77,Food,Breakfast,Egg Bites - Truffle Mushroom & Brie,Cage-free eggs with black truffles brie and mushrooms cooked sous vide,One Size,6.75,290,Limited Time,https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=400
+78,Food,Breakfast,Hearty Blueberry Oatmeal,Hearty steel-cut oatmeal with blueberry compote and nut medley,One Size,4.75,220,Year-Round,https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?w=400
+79,Food,Bakery,Butter Croissant,Classic flaky butter croissant,One Size,4.25,260,Year-Round,https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=400
+80,Food,Bakery,Chocolate Croissant,Butter croissant filled with dark chocolate,One Size,5.45,340,Year-Round,https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=400
+81,Food,Bakery,Blueberry Muffin,Muffin with blueberries and lemon glaze,One Size,3.75,380,Year-Round,https://images.unsplash.com/photo-1607958996333-41aef7caefaa?w=400
+82,Food,Bakery,Banana Nut Bread,Moist banana nut loaf,One Size,3.75,420,Year-Round,https://images.unsplash.com/photo-1574085733277-851d9d856a3a?w=400
+83,Food,Bakery,Iced Lemon Pound Cake,Lemon pound cake with lemon icing,One Size,4.25,470,Year-Round,https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400
+84,Food,Bakery,Pumpkin Loaf,Pumpkin loaf topped with pumpkin seeds,One Size,4.25,390,Seasonal,https://images.unsplash.com/photo-1574085733277-851d9d856a3a?w=400
+85,Food,Bakery,Petite Vanilla Bean Scone,Bite-sized vanilla scone with vanilla glaze,One Size,2.25,140,Year-Round,https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=400
+86,Food,Bakery,Classic Coffee Cake,Cinnamon sugar coffee cake with streusel topping,One Size,4.25,370,Year-Round,https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=400
+87,Food,Bakery,Chocolate Chip Cookie,Classic chocolate chip cookie,One Size,2.75,370,Year-Round,https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=400
+88,Food,Bakery,Yuzu Citrus Croissant,Croissant dough filled with yuzu citrus cream and candied yuzu,One Size,5.75,380,Seasonal,https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=400
+89,Food,Bakery,Berry Blondie,White chocolate blondie with raspberry and blueberry jam swirls,One Size,4.75,360,Seasonal,https://images.unsplash.com/photo-1607958996333-41aef7caefaa?w=400
+90,Food,Cake Pops,Birthday Cake Pop,Vanilla cake with pink icing,One Size,3.25,160,Year-Round,https://images.unsplash.com/photo-1548365328-8c6db3220e4c?w=400
+91,Food,Cake Pops,Chocolate Cake Pop,Chocolate cake with chocolate icing,One Size,3.25,170,Year-Round,https://images.unsplash.com/photo-1548365328-8c6db3220e4c?w=400
+92,Food,Cake Pops,Cookies & Cream Cake Pop,Cookies and cream cake with white chocolate coating,One Size,3.25,160,Year-Round,https://images.unsplash.com/photo-1548365328-8c6db3220e4c?w=400
+93,Food,Cake Pops,Valentine Cake Pop,Seasonal heart-shaped cake pop,One Size,3.25,160,Seasonal,https://images.unsplash.com/photo-1548365328-8c6db3220e4c?w=400
+94,Food,Lunch,Chicken & Quinoa Protein Bowl,Chicken with quinoa black beans and greens with lemon tahini dressing,One Size,10.45,420,Year-Round,https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400
+95,Food,Lunch,Tomato & Mozzarella Sandwich,Fresh mozzarella with tomatoes and basil on ciabatta,One Size,9.45,380,Year-Round,https://images.unsplash.com/photo-1554433607-66b5efe9d304?w=400
+96,Food,Lunch,Cheese & Fruit Protein Box,Cheese with fruit nuts and crackers,One Size,7.95,470,Year-Round,https://images.unsplash.com/photo-1505253758473-96b7015fcd40?w=400
+97,Food,Lunch,Eggs & Cheese Protein Box,Hard-boiled eggs with white cheddar and multigrain crackers,One Size,7.95,470,Year-Round,https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=400
+98,Food,Snacks & Treats,Kind Bar (various flavors),Whole nut and grain bar,One Size,2.75,200,Year-Round,https://images.unsplash.com/photo-1505253758473-96b7015fcd40?w=400
+99,Food,Snacks & Treats,Khloud Protein Popcorn,Sweet and salty kettle corn with 7g protein per bag,One Size,3.95,130,Year-Round,https://images.unsplash.com/photo-1505253758473-96b7015fcd40?w=400
+100,Food,Snacks & Treats,Ellenos Greek Yogurt - No Added Sugar Muesli,Unsweetened yogurt with no-sugar-added muesli topper,One Size,5.45,220,Year-Round,https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400
+101,Food,Snacks & Treats,Hippeas Chickpea Puffs,Chickpea snack puffs,One Size,2.75,130,Year-Round,https://images.unsplash.com/photo-1505253758473-96b7015fcd40?w=400
+102,Food,Snacks & Treats,Justin's Almond Butter Packets,Single-serve almond butter,One Size,1.95,190,Year-Round,https://images.unsplash.com/photo-1505253758473-96b7015fcd40?w=400
+103,At-Home Coffee,Whole Bean,Veranda Blend,Lightest blonde roast with mellow and soft notes — Latin America origin,12oz / 1lb bag,13.95-17.95,0,Year-Round,https://images.unsplash.com/photo-1611854779393-1b2da9d400fe?w=400
+104,At-Home Coffee,Whole Bean,Breakfast Blend,Light roast with a bright and citrusy flavor — Latin America origin,12oz / 1lb bag,13.95-17.95,0,Year-Round,https://images.unsplash.com/photo-1611854779393-1b2da9d400fe?w=400
+105,At-Home Coffee,Whole Bean,Pike Place Roast,Smooth and balanced medium roast — the original Starbucks blend since 1971,12oz / 1lb bag,13.95-17.95,0,Year-Round,https://images.unsplash.com/photo-1611854779393-1b2da9d400fe?w=400
+106,At-Home Coffee,Whole Bean,House Blend,Classic balanced medium roast — Latin America origin,12oz / 1lb bag,13.95-17.95,0,Year-Round,https://images.unsplash.com/photo-1611854779393-1b2da9d400fe?w=400
+107,At-Home Coffee,Whole Bean,Caffè Verona,Dark roast with notes of dark cocoa and caramelly sweetness,12oz / 1lb bag,13.95-17.95,0,Year-Round,https://images.unsplash.com/photo-1611854779393-1b2da9d400fe?w=400
+108,At-Home Coffee,Whole Bean,Sumatra,Full-bodied dark roast with earthy and herbal notes — single origin Sumatra,12oz / 1lb bag,13.95-17.95,0,Year-Round,https://images.unsplash.com/photo-1611854779393-1b2da9d400fe?w=400
+109,At-Home Coffee,Whole Bean,Guatemala Antigua,Medium roast with notes of cocoa and brown sugar — single origin Guatemala,12oz / 1lb bag,13.95-17.95,0,Year-Round,https://images.unsplash.com/photo-1611854779393-1b2da9d400fe?w=400
+110,At-Home Coffee,Whole Bean,Colombia,Medium roast with rich and caramelly notes — single origin Colombia,12oz / 1lb bag,13.95-17.95,0,Year-Round,https://images.unsplash.com/photo-1611854779393-1b2da9d400fe?w=400
+111,At-Home Coffee,Whole Bean,Ethiopia,Medium roast with bright berry and citrus notes — single origin Ethiopia,12oz / 1lb bag,13.95-17.95,0,Year-Round,https://images.unsplash.com/photo-1611854779393-1b2da9d400fe?w=400
+112,At-Home Coffee,Whole Bean,Kenya,Bold medium roast with blackcurrant and grapefruit notes — single origin Kenya,12oz / 1lb bag,13.95-17.95,0,Year-Round,https://images.unsplash.com/photo-1611854779393-1b2da9d400fe?w=400
+113,At-Home Coffee,Whole Bean,Espresso Roast,Dark roast crafted for espresso with caramelly sweetness,12oz / 1lb bag,13.95-17.95,0,Year-Round,https://images.unsplash.com/photo-1611854779393-1b2da9d400fe?w=400
+114,At-Home Coffee,Whole Bean,Italian Roast,Extra dark roast with intense smoky and caramel notes,12oz / 1lb bag,13.95-17.95,0,Year-Round,https://images.unsplash.com/photo-1611854779393-1b2da9d400fe?w=400
+115,At-Home Coffee,Whole Bean,French Roast,Dark roast with intense smoky flavor,12oz / 1lb bag,13.95-17.95,0,Year-Round,https://images.unsplash.com/photo-1611854779393-1b2da9d400fe?w=400
+116,At-Home Coffee,Whole Bean,Decaf Pike Place Roast,Decaffeinated medium roast version of the classic Pike Place blend,12oz / 1lb bag,13.95-17.95,0,Year-Round,https://images.unsplash.com/photo-1611854779393-1b2da9d400fe?w=400
+117,At-Home Coffee,Whole Bean,Decaf Sumatra,Decaffeinated full-bodied dark roast with earthy herbal notes,12oz / 1lb bag,13.95-17.95,0,Year-Round,https://images.unsplash.com/photo-1611854779393-1b2da9d400fe?w=400
+118,At-Home Coffee,Whole Bean,Starbucks 1971 Roast,New dark roast inspired by Pike Place heritage,12oz / 1lb bag,14.95-18.95,0,Year-Round,https://images.unsplash.com/photo-1611854779393-1b2da9d400fe?w=400
+119,At-Home Coffee,Whole Bean,Sun-Dried Ethiopia Highlands,Single-origin medium roast with notes of blackberry jam and wild mint,12oz / 1lb bag,15.95-19.95,0,Seasonal,https://images.unsplash.com/photo-1611854779393-1b2da9d400fe?w=400
+120,At-Home Coffee,Whole Bean,Holiday Blend,Medium-dark roast with spiced notes — seasonal holiday offering,12oz / 1lb bag,13.95-17.95,0,Seasonal,https://images.unsplash.com/photo-1611854779393-1b2da9d400fe?w=400
+121,At-Home Coffee,VIA Instant,VIA Instant Pike Place Roast,Microground medium roast instant coffee — 100% arabica,Box of 8 / 26 / 50 packets,8.95-29.95,0,Year-Round,https://images.unsplash.com/photo-1559496417-e7f25cb247f3?w=400
+122,At-Home Coffee,VIA Instant,VIA Instant Italian Roast,Microground dark roast instant coffee — 100% arabica,Box of 8 / 26 / 50 packets,8.95-29.95,0,Year-Round,https://images.unsplash.com/photo-1559496417-e7f25cb247f3?w=400
+123,At-Home Coffee,VIA Instant,VIA Instant French Roast,Microground extra-dark roast instant coffee — 100% arabica,Box of 8 / 26 / 50 packets,8.95-29.95,0,Year-Round,https://images.unsplash.com/photo-1559496417-e7f25cb247f3?w=400
+124,At-Home Coffee,VIA Instant,VIA Instant Colombia,Microground single-origin medium roast — 100% arabica,Box of 8 / 26 / 50 packets,8.95-29.95,0,Year-Round,https://images.unsplash.com/photo-1559496417-e7f25cb247f3?w=400
+125,At-Home Coffee,VIA Instant,VIA Instant Veranda Blend,Microground blonde roast instant coffee — 100% arabica,Box of 8 / 26 / 50 packets,8.95-29.95,0,Year-Round,https://images.unsplash.com/photo-1559496417-e7f25cb247f3?w=400
+126,At-Home Coffee,VIA Instant,VIA Instant Decaf Italian Roast,Decaffeinated microground dark roast instant coffee,Box of 8 / 26 / 50 packets,8.95-29.95,0,Year-Round,https://images.unsplash.com/photo-1559496417-e7f25cb247f3?w=400
+127,At-Home Coffee,VIA Instant,VIA Instant Iced Coffee (Sweetened),Lightly sweetened microground instant iced coffee — serve over ice,Box of 6 packets,7.95-12.95,80,Year-Round,https://images.unsplash.com/photo-1559496417-e7f25cb247f3?w=400
+128,At-Home Coffee,VIA Instant,VIA Instant Caramel Latte,Microground instant latte with caramel flavor — just add water or milk,Box of 6 packets,7.95-12.95,110,Year-Round,https://images.unsplash.com/photo-1559496417-e7f25cb247f3?w=400
