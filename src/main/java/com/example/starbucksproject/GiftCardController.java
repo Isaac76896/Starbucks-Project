@@ -12,6 +12,9 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class GiftCardController extends BaseController {
+    /**
+     * Variables and FXML variables for the GiftCardController class
+     */
     private Customer customer;
     private RewardsAccount account;
     private double selectedAmount = 25.0;
@@ -26,20 +29,28 @@ public class GiftCardController extends BaseController {
     @FXML private TextField messageField;
     @FXML private VBox cartPanel;
 
+    /* super class */
     public GiftCardController() {}
 
+    /**
+     * sets the customer and account
+     * @param customer is a Customer
+     */
     public void setCustomer(Customer customer) { this.customer = customer; }
     public void setAccount(RewardsAccount account) { this.account = account; }
 
+    /* ensures the cart pops up from the side */
     @Override
     protected VBox getCartPanel() { return cartPanel; }
 
+    /* initializes everything */
     @FXML
     public void initialize() {
         updateOrderSummary();
         initCart();
     }
 
+    /* updates the order summary */
     private void updateOrderSummary() {
         String formatted = String.format("$%.0f", selectedAmount);
         if (amountLabel != null) amountLabel.setText(formatted);
@@ -47,6 +58,10 @@ public class GiftCardController extends BaseController {
         if (giftCardAmountLabel != null) giftCardAmountLabel.setText(formatted);
     }
 
+    /**
+     * Initializes the buttons and different cards that can be picked
+     * @param event is an ActionEvent
+     */
     @FXML public void selectClassicGreen(ActionEvent event) { selectedDesign = "Classic Green"; }
     @FXML public void selectBirthday(ActionEvent event) { selectedDesign = "Birthday"; }
     @FXML public void selectThankYou(ActionEvent event) { selectedDesign = "Thank you"; }
@@ -56,6 +71,10 @@ public class GiftCardController extends BaseController {
     @FXML public void select50(ActionEvent event) { selectedAmount = 50; updateOrderSummary(); }
     @FXML public void select100(ActionEvent event) { selectedAmount = 100; updateOrderSummary(); }
 
+    /**
+     * initializes FXML button to purchase the gift card
+     * @param event is an Action Event
+     */
     @FXML
     public void purchaseGiftCard(ActionEvent event) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -65,6 +84,11 @@ public class GiftCardController extends BaseController {
         alert.showAndWait();
     }
 
+    /**
+     * initializes the MenuButton
+     * @param event is an Action Event
+     * @throws IOException to catch errors
+     */
     @FXML
     public void menuButtonClick(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Menu Screen.fxml"));
@@ -76,6 +100,12 @@ public class GiftCardController extends BaseController {
         SceneNavigator.setScene(stage, root);
         stage.show();
     }
+
+    /**
+     * initializes when locations button is clicked
+     * @param event is an Action Event
+     * @throws IOException to catch errors
+     */
 
     @FXML
     public void locationsButtonClick(ActionEvent event) throws IOException {
@@ -89,6 +119,12 @@ public class GiftCardController extends BaseController {
         stage.show();
     }
 
+    /**
+     * initializes when rewards button is clicked
+     * @param event is an Action Event
+     * @throws IOException to catch errors
+     */
+
     @FXML
     public void rewardsButtonClick(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("RewardsScreen.fxml"));
@@ -99,6 +135,12 @@ public class GiftCardController extends BaseController {
         SceneNavigator.setScene(stage, root);
         stage.show();
     }
+
+    /**
+     * initializes when gift cards button is clicked
+     * @param event is an Action Event
+     * @throws IOException to catch errors
+     */
 
     @FXML
     public void giftCardsButtonClick(ActionEvent event) throws IOException {
@@ -111,6 +153,11 @@ public class GiftCardController extends BaseController {
         SceneNavigator.setScene(stage, root);
         stage.show();
     }
+
+    /**
+     * toggles the cart popup
+     * @param event is an Action Event
+     */
 
     @FXML
     public void cartButtonClick(ActionEvent event) {

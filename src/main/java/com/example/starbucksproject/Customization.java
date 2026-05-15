@@ -1,11 +1,21 @@
 package com.example.starbucksproject;
 
 public class Customization {
+    /**
+     * Variables for Customization class
+     */
     private String customId;
     private String type;
     private String value;
     private double extraCost;
 
+    /**
+     * Customization super class
+     * @param customId initializes the custom id of the item
+     * @param type initializes the type of modification
+     * @param value initializes the new value of the product
+     * @param extraCost initializes the extra cost of the modification
+     */
     public Customization(String customId, String type, String value, double extraCost) {
         this.customId = customId;
         this.type = type;

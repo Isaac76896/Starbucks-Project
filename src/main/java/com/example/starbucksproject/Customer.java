@@ -4,10 +4,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Customer extends User {
+    /**
+     * Variables for the Customer class
+     */
     private String rewardsId;
     private int starBalance;
     private List<Order> orderHistory;
     private List<Order> favoriteItems;
+
+    /**
+     * Customer super class
+     * @param userId initializes user's id
+     * @param name initializes user's name
+     * @param email initializes user's email
+     * @param passwordHash initializes the user's password
+     */
 
     public Customer(String userId, String name, String email, String passwordHash) {
         super(userId, name, email, passwordHash);

@@ -15,6 +15,9 @@ import java.util.*;
 import java.util.stream.*;
 
 public class MenuController extends BaseController {
+    /**
+     * variables and FXML variables for MenuController
+     */
     private List<MenuItem> menuItems;
     private List<String> categories;
     private Customer customer;
@@ -36,18 +39,24 @@ public class MenuController extends BaseController {
     private String activeCategory = null;
     private String activeSubcategory = null;
 
+    /* super class */
     public MenuController() {}
 
+    /* cart popup */
     @Override
     protected VBox getCartPanel() {
         return cartPanel;
     }
 
+    /* setters and getters */
     public void setMenuItems(List<MenuItem> menuItems) { this.menuItems = menuItems; }
     public void setCategories(List<String> categories) { this.categories = categories; }
     public List<MenuItem> getMenuItems() { return menuItems; }
     public List<String> getCategories() { return categories; }
 
+    /**
+     * loads the menu
+     */
     public void loadMenu() {
         menuItems = new ArrayList<>();
         categories = new ArrayList<>();
@@ -72,6 +81,11 @@ public class MenuController extends BaseController {
         }
     }
 
+    /**
+     * reads through the CSV file
+     * @param line reads through every line
+     * @return an array of Strings
+     */
     private String[] parseCsvLine(String line) {
         List<String> fields = new ArrayList<>();
         StringBuilder current = new StringBuilder();
@@ -91,6 +105,11 @@ public class MenuController extends BaseController {
         return fields.toArray(new String[0]);
     }
 
+    /**
+     * filters menu by category
+     * @param category is a String
+     * @return menu item(s) from the list of items
+     */
     public List<MenuItem> filterByCategory(String category) {
         return menuItems.stream()
                 .filter(item -> item.getCategory().equalsIgnoreCase(category)
@@ -99,6 +118,11 @@ public class MenuController extends BaseController {
                 .collect(Collectors.toList());
     }
 
+    /**
+     * searches for items through search bar
+     * @param query is a String
+     * @return menu item(s) from the list of items
+     */
     public List<MenuItem> searchItems(String query) {
         String lower = query.toLowerCase();
         return menuItems.stream()
@@ -108,6 +132,11 @@ public class MenuController extends BaseController {
                 .collect(Collectors.toList());
     }
 
+    /**
+     * gets the item details
+     * @param itemId is a String
+     * @return the menu item itself
+     */
     public MenuItem getItemDetails(String itemId) {
         return menuItems.stream()
                 .filter(item -> item.getId().equals(itemId))
@@ -126,6 +155,9 @@ public class MenuController extends BaseController {
         initCart();
     }
 
+    /**
+     * builds the category tabs
+     */
     private void buildCategoryTabs() {
         Button allBtn = createFilterTab("All", true);
         allBtn.setOnAction(e -> {
@@ -150,6 +182,10 @@ public class MenuController extends BaseController {
         }
     }
 
+    /**
+     * builds the subcategory tabs
+     * @param category is a String
+     */
     private void buildSubcategoryTabs(String category) {
         filterButtonsBox.getChildren().clear();
 
@@ -202,6 +238,12 @@ public class MenuController extends BaseController {
         }
     }
 
+    /**
+     * creates the filter tab
+     * @param text is a String
+     * @param active is a boolean
+     * @return button
+     */
     private Button createFilterTab(String text, boolean active) {
         Button btn = new Button(text);
         if (active) {
@@ -217,6 +259,7 @@ public class MenuController extends BaseController {
 
     private List<MenuItem> currentDisplayedItems = new ArrayList<>();
 
+    /* displays the items */
     private void displayItems(List<MenuItem> items) {
         currentDisplayedItems = items;
         itemCardGrid.getChildren().clear();
@@ -225,6 +268,7 @@ public class MenuController extends BaseController {
         }
     }
 
+    /* creates the item cards */
     private VBox createItemCard(MenuItem item) {
         VBox card = new VBox(8);
         card.setAlignment(Pos.TOP_CENTER);
@@ -275,6 +319,10 @@ public class MenuController extends BaseController {
         return card;
     }
 
+    /**
+     * changes what is displayed based on the filter
+     * @param query is a String
+     */
     private void onSearchChanged(String query) {
         if (query == null || query.trim().isEmpty()) {
             if (activeSubcategory != null) {
@@ -289,6 +337,12 @@ public class MenuController extends BaseController {
         }
     }
 
+    /**
+     * button for menu click
+     * @param event is an Action Event
+     * @throws IOException to catch errors
+     */
+
     @FXML
     public void menuButtonClick(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Menu Screen.fxml"));
@@ -301,10 +355,17 @@ public class MenuController extends BaseController {
         stage.show();
     }
 
+    /* cart popup */
     @FXML
     public void cartButtonClick(ActionEvent event) {
        toggleCart();
     }
+
+    /**
+     * button for gift card click
+     * @param event is an Action Event
+     * @throws IOException to catch errors
+     */
 
     @FXML
     public void giftCardsButtonClick(ActionEvent event) throws IOException {
@@ -318,6 +379,12 @@ public class MenuController extends BaseController {
         stage.show();
     }
 
+    /**
+     * button for locations click
+     * @param event is an Action Event
+     * @throws IOException to catch errors
+     */
+
     @FXML
     public void locationsButtonClick(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Store Screen.fxml"));
@@ -330,6 +397,12 @@ public class MenuController extends BaseController {
         stage.show();
     }
 
+    /**
+     * button for rewards click
+     * @param event is an Action Event
+     * @throws IOException to catch errors
+     */
+
     @FXML
     public void rewardsButtonClick(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("RewardsScreen.fxml"));
@@ -341,6 +414,7 @@ public class MenuController extends BaseController {
         stage.show();
     }
 
+    /* setters */
     public void setCustomer(Customer customer) { this.customer = customer; }
     public void setAccount(RewardsAccount account) { this.account = account; }
 }

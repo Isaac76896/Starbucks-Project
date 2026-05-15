@@ -12,6 +12,9 @@ import java.util.Date;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
+        /**
+         * initializes the application
+         */
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Menu Screen.fxml"));
         javafx.scene.Parent root = fxmlLoader.load();
 

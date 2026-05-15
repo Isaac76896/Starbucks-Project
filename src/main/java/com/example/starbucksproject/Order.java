@@ -4,11 +4,23 @@ import java.util.Date;
 import java.util.List;
 
 public class Order {
+    /**
+     * Variables for Order class
+     */
     private String orderId;
     private List<OrderItem> items;
     private String status;
     private double totalPrice;
     private Date timeStamp;
+
+    /**
+     * Order super class
+     * @param orderId sets the order id
+     * @param items sets the items to be ordered
+     * @param status sets the status of the order
+     * @param totalPrice sets the total price
+     * @param timeStamp sets a time stamp of when the order was placed
+     */
 
     public Order(String orderId, List<OrderItem> items, String status, double totalPrice, Date timeStamp) {
         this.orderId = orderId;
@@ -17,6 +29,8 @@ public class Order {
         this.totalPrice = totalPrice;
         this.timeStamp = timeStamp;
     }
+
+    /* setters and getters */
 
     public void setOrderId(String orderId) {
         this.orderId = orderId;

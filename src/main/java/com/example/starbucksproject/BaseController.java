@@ -8,11 +8,18 @@ import java.util.List;
 
 public abstract class BaseController {
 
+    /**
+     * Variables for the BaseController class
+     */
+
     protected List<MenuItem> cartItems;
     protected double cartTotal;
 
     protected abstract VBox getCartPanel();
 
+    /**
+     * initializes the cart
+     */
     protected void initCart() {
         cartItems = AppState.getInstance().getCartItems();
         cartTotal = AppState.getInstance().getCartTotal();
@@ -23,12 +30,21 @@ public abstract class BaseController {
         }
     }
 
+    /**
+     * toggles the cart (visually)
+     */
+
     protected void toggleCart() {
         if (getCartPanel() == null) return;
         boolean showing = getCartPanel().isVisible();
         getCartPanel().setVisible(!showing);
         getCartPanel().setManaged(!showing);
     }
+
+    /**
+     * adds to the cart (visually)
+     * @param item
+     */
 
     protected void addToCart(MenuItem item) {
         AppState.getInstance().addToCart(item);
@@ -39,12 +55,21 @@ public abstract class BaseController {
         updateCartPanel();
     }
 
+    /**\
+     * removes from cart (visually)
+     * @param item
+     */
+
     protected void removeFromCart(MenuItem item) {
         AppState.getInstance().removeFromCart(item);
         cartItems = AppState.getInstance().getCartItems();
         cartTotal = AppState.getInstance().getCartTotal();
         updateCartPanel();
     }
+
+    /**
+     * updates the contents of the cart (visually)
+     */
 
     protected void updateCartPanel() {
         if (getCartPanel() == null) return;
@@ -99,6 +124,10 @@ public abstract class BaseController {
         placeOrder.setOnAction(e -> placeOrder());
         getCartPanel().getChildren().add(placeOrder);
     }
+
+    /**
+     * initializes the screen that pops up when you place an order and clears the cart
+     */
 
     protected void placeOrder() {
         if (cartItems.isEmpty()) {

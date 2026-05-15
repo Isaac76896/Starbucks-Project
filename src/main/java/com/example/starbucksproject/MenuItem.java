@@ -1,6 +1,9 @@
 package com.example.starbucksproject;
 public class MenuItem {
 
+    /**
+     * Variables for MenuItem
+     */
     private String itemId;
     private String name;
     private double price;
@@ -13,12 +16,32 @@ public class MenuItem {
     private String available;
     private String imageUrl;
 
+    /**
+     * Menu Item super class
+     * @param itemId sets the item id
+     * @param name sets the name of the item
+     * @param price sets the price of the item
+     * @param category sets the category of the item
+     */
     public MenuItem(String itemId, String name, double price, String category) {
         this.itemId = itemId;
         this.name = name;
         this.price = price;
         this.category = category;
     }
+
+    /**
+     * Menu Item super class
+     * @param itemId sets the item id
+     * @param category sets the item category
+     * @param subcategory sets the item subcategory
+     * @param name sets the name of the item
+     * @param description sets item description
+     * @param sizeOptions sets size options
+     * @param priceRange sets price range
+     * @param caloriesRange sets calories range
+     * @param available sets available items
+     */
 
     public MenuItem(String itemId, String category, String subcategory, String name,
                     String description, String sizeOptions, String priceRange,
@@ -40,6 +63,11 @@ public class MenuItem {
             this.price = 0.0;
         }
     }
+
+    /**
+     * gets the details of the items
+     * @return String
+     */
 
     public String getDetails() {
         StringBuilder sb = new StringBuilder();
@@ -68,6 +96,8 @@ public class MenuItem {
         }
         return sb.toString();
     }
+
+    /* setters and getters */
 
     public void setItemId(String itemId) { this.itemId = itemId; }
     public void setName(String name) { this.name = name; }

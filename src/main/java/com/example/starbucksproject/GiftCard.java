@@ -4,11 +4,21 @@ import java.util.Date;
 import java.util.UUID;
 
 public class GiftCard {
+    /**
+     * Variables for the GiftCard method
+     */
     private String cardNumber;
     private double balance;
     private Date expirationDate;
     private boolean isActive;
 
+    /**
+     * Gift Card super class
+     * @param cardNumber initializes the gift card number
+     * @param balance sets the balance of the card
+     * @param expirationDate sets the expiration date of the card
+     * @param isActive indicates whether card is active or not
+     */
     public GiftCard(String cardNumber, double balance, Date expirationDate, boolean isActive) {
         this.cardNumber = cardNumber;
         this.balance = balance;
